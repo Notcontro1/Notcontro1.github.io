@@ -29,10 +29,10 @@
     </div>
 
     <div class="tabs" role="tablist" aria-label="Portfolio sections">
-      <button class="tab is-active" data-filter="all" role="tab" aria-selected="true">All</button>
-      <button class="tab" data-filter="experience" role="tab">Experience</button>
-      <button class="tab" data-filter="projects" role="tab">Projects</button>
-      <button class="tab" data-filter="about" role="tab">About</button>
+      <button class="tab is-active" data-go="#all" role="tab" aria-selected="true">All</button>
+      <button class="tab" data-go="#experience" role="tab">Experience</button>
+      <button class="tab" data-go="#projects" role="tab">Projects</button>
+      <button class="tab" data-go="#about" role="tab">About</button>
     </div>
 
     <div class="actions">
@@ -46,7 +46,7 @@
     </div>
   </header>
 
-  <main class="wrap">
+  <main class="wrap" id="all">
     <!-- RPG HUD -->
     <section class="hudbar reveal" id="hudbar">
       <div class="playercard tilt">
@@ -125,8 +125,8 @@
         </p>
 
         <div class="cta reveal">
-          <a class="btn primary" href="#cards">Explore</a>
-          <a class="btn" href="#projects">Projects</a>
+          <a class="btn primary" href="#projects">Go to Projects</a>
+          <a class="btn" href="#experience">Go to Experience</a>
           <a class="btn" href="#contact">Contact</a>
         </div>
 
@@ -151,8 +151,7 @@
   <span class="p">name</span>: <span class="s">"Abdul Masyhur Deo"</span>,
   <span class="p">title</span>: <span class="s">"Software Developer (Student)"</span>,
   <span class="p">school</span>: <span class="s">"NYP — Diploma in IT"</span>,
-  <span class="p">focus</span>: [<span class="s">"Flask"</span>, <span class="s">"SQLite"</span>, <span class="s">"Web UI"</span>],
-  <span class="p">traits</span>: { <span class="p">quickLearner</span>: <span class="b">true</span>, <span class="p">teamPlayer</span>: <span class="b">true</span> },
+  <span class="p">quests</span>: [<span class="s">"WDP Upload & Export"</span>, <span class="s">"Project Heartcode"</span>],
   <span class="p">hireable</span>: () <span class="k">=&gt;</span> <span class="b">true</span>
 };
           </pre>
@@ -162,12 +161,119 @@
       </div>
     </section>
 
-    <!-- CARDS GRID -->
-    <section id="cards" class="gridWrap reveal">
-      <div class="grid">
-        <!-- Resume card -->
-        <article class="card big filterable" data-kind="about">
-          <div class="cardhead">
+    <!-- SECTION CLUMPS -->
+    <section id="projects" class="sectionblock reveal">
+      <div class="sectionhead">
+        <div>
+          <h2>Projects</h2>
+          <p class="muted">Your quest board — click to expand each quest.</p>
+        </div>
+        <span class="sectionchip">QUESTS</span>
+      </div>
+
+      <div class="clump">
+        <details class="accordion tilt" open>
+          <summary>
+            <div class="sum-left">
+              <span class="badge2">Main Quest</span>
+              <strong>WDP — Upload & Export Module</strong>
+              <span class="muted smalltxt">Python • Flask • SQLite • Bootstrap</span>
+            </div>
+            <span class="sum-icon">+</span>
+          </summary>
+          <div class="acc-body">
+            <p class="muted">
+              Built an upload/import + export workflow: CSV/XLSX import into a central SQLite database,
+              location-based handling, upload history tracking, and filtered export.
+            </p>
+            <div class="acc-links">
+              <a class="link" href="#wdp">View Case Study →</a>
+              <a class="link" href="[WDP_REPO_LINK]" target="_blank" rel="noreferrer">Repo →</a>
+            </div>
+          </div>
+        </details>
+
+        <details class="accordion tilt">
+          <summary>
+            <div class="sum-left">
+              <span class="badge2">Side Quest</span>
+              <strong>Project Heartcode (2023)</strong>
+              <span class="muted smalltxt">HTML • CSS • JavaScript • GitHub Pages</span>
+            </div>
+            <span class="sum-icon">+</span>
+          </summary>
+          <div class="acc-body">
+            <p class="muted">
+              Cyberbullying awareness website with Impact/Effects/Prevention pages, scroll-triggered text animations,
+              and a light/dark theme toggle.
+            </p>
+            <div class="acc-links">
+              <a class="link" href="https://ttinten.github.io/Project-Heartcode/index.html" target="_blank" rel="noreferrer">Live →</a>
+              <a class="link" href="[HEARTCODE_REPO_LINK]" target="_blank" rel="noreferrer">Repo →</a>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section id="experience" class="sectionblock reveal">
+      <div class="sectionhead">
+        <div>
+          <h2>Experience</h2>
+          <p class="muted">Party roles — teamwork, reliability, leadership.</p>
+        </div>
+        <span class="sectionchip">PARTY</span>
+      </div>
+
+      <div class="clump">
+        <details class="accordion tilt" open>
+          <summary>
+            <div class="sum-left">
+              <span class="badge2">Work</span>
+              <strong>McDonald’s Singapore — Part-Time Crew</strong>
+              <span class="muted smalltxt">Bukit Panjang Plaza • 2024 – Present</span>
+            </div>
+            <span class="sum-icon">+</span>
+          </summary>
+          <div class="acc-body">
+            <ul class="list">
+              <li>Rotated across cashier, kitchen, runner, and McCafé stations during peak periods.</li>
+              <li>Coordinated handovers and checks to reduce missing items and delays.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="accordion tilt">
+          <summary>
+            <div class="sum-left">
+              <span class="badge2">Leadership</span>
+              <strong>NRPC Robotics — OIC</strong>
+              <span class="muted smalltxt">Student Activity</span>
+            </div>
+            <span class="sum-icon">+</span>
+          </summary>
+          <div class="acc-body">
+            <ul class="list">
+              <li>Coordinated tasks and supported troubleshooting during robot build and testing.</li>
+              <li>Helped align the team and track progress during key milestones.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section id="about" class="sectionblock reveal">
+      <div class="sectionhead">
+        <div>
+          <h2>About</h2>
+          <p class="muted">Loadout — resume, tools, and quick stats.</p>
+        </div>
+        <span class="sectionchip">LOADOUT</span>
+      </div>
+
+      <div class="grid3">
+        <div class="card2 tilt">
+          <div class="cardhead2">
             <div>
               <h3>Resume</h3>
               <p class="muted">(Click to download)</p>
@@ -178,11 +284,10 @@
             A quick summary of my education, projects, experience, and skills — available as a PDF.
           </p>
           <a class="link" href="[RESUME_PDF_LINK]" target="_blank" rel="noreferrer">Download my Resume →</a>
-        </article>
+        </div>
 
-        <!-- Tech stack card -->
-        <article class="card big filterable" data-kind="about">
-          <div class="cardhead">
+        <div class="card2 tilt">
+          <div class="cardhead2">
             <div>
               <h3>Tech Stack</h3>
               <p class="muted">Tools I use often</p>
@@ -199,113 +304,22 @@
             <span class="badge">Bootstrap</span>
             <span class="badge">Git/GitHub</span>
           </div>
-        </article>
+        </div>
 
-        <!-- Gamer stat card -->
-        <article class="card big filterable" data-kind="about">
-          <div class="cardhead">
+        <div class="card2 tilt">
+          <div class="cardhead2">
             <div>
               <h3>Stats</h3>
-              <p class="muted">Gamer HUD style</p>
+              <p class="muted">Gamer HUD</p>
             </div>
             <div class="miniicon">▣</div>
           </div>
           <div class="stats">
-            <div class="stat">
-              <span class="label">Class</span>
-              <span class="value">Software Dev</span>
-            </div>
-            <div class="stat">
-              <span class="label">Mode</span>
-              <span class="value">Build • Test • Improve</span>
-            </div>
-            <div class="stat">
-              <span class="label">Current Quest</span>
-              <span class="value">WDP Web App</span>
-            </div>
+            <div class="stat"><span class="label">Class</span><span class="value">Software Dev</span></div>
+            <div class="stat"><span class="label">Mode</span><span class="value">Build • Test • Improve</span></div>
+            <div class="stat"><span class="label">Quest</span><span class="value">WDP Web App</span></div>
           </div>
-        </article>
-
-        <!-- Projects -->
-        <article id="projects" class="card wide filterable" data-kind="projects">
-          <div class="cardhead">
-            <div>
-              <h3>WDP – Upload & Export Module</h3>
-              <p class="muted">Python • Flask • Jinja2 • SQLite • Bootstrap</p>
-            </div>
-            <div class="miniicon">⚙</div>
-          </div>
-          <p class="muted">
-            Built an upload/import + export workflow: CSV/XLSX import into a central SQLite database,
-            location-based handling, upload history tracking, and filtered export.
-          </p>
-          <div class="cardlinks">
-            <a class="link" href="#wdp">View Case Study →</a>
-            <a class="link" href="[WDP_REPO_LINK]" target="_blank" rel="noreferrer">Repo →</a>
-          </div>
-        </article>
-
-        <article class="card wide filterable" data-kind="projects">
-          <div class="cardhead">
-            <div>
-              <h3>Project Heartcode (2023)</h3>
-              <p class="muted">HTML • CSS • JavaScript • GitHub Pages</p>
-            </div>
-            <div class="miniicon">◆</div>
-          </div>
-          <p class="muted">
-            Cyberbullying awareness website with Impact/Effects/Prevention pages, scroll-triggered
-            text animations, and a light/dark theme toggle.
-          </p>
-          <div class="cardlinks">
-            <a class="link" href="https://ttinten.github.io/Project-Heartcode/index.html" target="_blank" rel="noreferrer">Live →</a>
-            <a class="link" href="[HEARTCODE_REPO_LINK]" target="_blank" rel="noreferrer">Repo →</a>
-          </div>
-        </article>
-
-        <!-- Experience -->
-        <article class="card wide filterable" data-kind="experience">
-          <div class="cardhead">
-            <div>
-              <h3>McDonald’s Singapore — Part-Time Crew</h3>
-              <p class="muted">Bukit Panjang Plaza • 2024 – Present</p>
-            </div>
-            <div class="miniicon">▦</div>
-          </div>
-          <ul class="list">
-            <li>Rotated across cashier, kitchen, runner, and McCafé stations during peak periods.</li>
-            <li>Supported smooth operations by coordinating handovers and checks to reduce delays.</li>
-          </ul>
-        </article>
-
-        <article class="card wide filterable" data-kind="experience">
-          <div class="cardhead">
-            <div>
-              <h3>NRPC Robotics — OIC</h3>
-              <p class="muted">Student Activity</p>
-            </div>
-            <div class="miniicon">⬡</div>
-          </div>
-          <ul class="list">
-            <li>Coordinated tasks and supported troubleshooting during robot build and testing.</li>
-            <li>Helped align the team and track progress during key milestones.</li>
-          </ul>
-        </article>
-
-        <!-- About -->
-        <article class="card wide filterable" data-kind="about">
-          <div class="cardhead">
-            <div>
-              <h3>About Me</h3>
-              <p class="muted">Short + straight</p>
-            </div>
-            <div class="miniicon">◎</div>
-          </div>
-          <p class="muted">
-            I’m currently studying at NYP. I enjoy backend + database work, and I like polishing UI so
-            the user flow feels clean. I’m looking for internships/entry roles where I can learn and contribute.
-          </p>
-        </article>
+        </div>
       </div>
     </section>
 
@@ -319,9 +333,7 @@
       <div class="casegrid">
         <div class="casepanel tilt">
           <h4>Goal</h4>
-          <p class="muted">
-            Make importing and exporting sales data reliable and traceable for the web app.
-          </p>
+          <p class="muted">Make importing and exporting sales data reliable and traceable for the web app.</p>
 
           <h4>What I built</h4>
           <ul class="list">
@@ -397,21 +409,14 @@
       topbar.classList.toggle("scrolled", window.scrollY > 6);
     });
 
-    // Tabs filter (All / Experience / Projects / About)
+    // Tabs now scroll to sections (clumped)
     const tabs = document.querySelectorAll(".tab");
-    const cards = document.querySelectorAll(".filterable");
     tabs.forEach(t => t.addEventListener("click", () => {
       tabs.forEach(x => x.classList.remove("is-active"));
       t.classList.add("is-active");
-      const f = t.dataset.filter;
-
-      cards.forEach(c => {
-        const kind = c.dataset.kind;
-        const show = (f === "all") || (kind === f);
-        c.style.display = show ? "" : "none";
-      });
-
-      document.getElementById("cards").scrollIntoView({behavior:"smooth", block:"start"});
+      const target = t.dataset.go;
+      const el = document.querySelector(target);
+      if (el) el.scrollIntoView({behavior:"smooth", block:"start"});
     }));
 
     // Quest log click navigation
@@ -430,11 +435,9 @@
         const r = el.getBoundingClientRect();
         const x = (e.clientX - r.left) / r.width - 0.5;
         const y = (e.clientY - r.top) / r.height - 0.5;
-        el.style.transform = `translateY(-2px) rotateX(${(-y * 6).toFixed(2)}deg) rotateY(${(x * 6).Fixed ? (x*6).Fixed(2) : (x*6).toFixed(2)}deg)`;
+        el.style.transform = `translateY(-2px) rotateX(${(-y * 6).toFixed(2)}deg) rotateY(${(x * 6).toFixed(2)}deg)`;
       });
-      el.addEventListener("mouseleave", () => {
-        el.style.transform = "";
-      });
+      el.addEventListener("mouseleave", () => { el.style.transform = ""; });
     });
 
     // Theme toggle (still monotone, slightly lighter)
@@ -481,7 +484,6 @@
       else if (projects && y + 200 >= projects.offsetTop) questText.textContent = "View Projects";
       else questText.textContent = "Explore";
 
-      // Achievements
       const a1 = document.getElementById("ach1");
       const a2 = document.getElementById("ach2");
       const a3 = document.getElementById("ach3");
@@ -495,6 +497,14 @@
 
     window.addEventListener("scroll", updateXP, {passive:true});
     window.addEventListener("load", updateXP);
+
+    // Accordion icon flip
+    document.querySelectorAll("details.accordion").forEach(d => {
+      const icon = d.querySelector(".sum-icon");
+      const sync = () => icon.textContent = d.open ? "−" : "+";
+      sync();
+      d.addEventListener("toggle", sync);
+    });
   </script>
 </body>
 </html>
