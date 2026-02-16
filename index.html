@@ -4,13 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Abdul Masyhur Deo | Software Developer</title>
+
+  <!-- Fonts (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Uncial+Antiqua&family=Pacifico&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- PRESS START OVERLAY -->
   <div class="start-overlay" id="startOverlay">
     <div class="start-card">
-      <div class="start-title">PRESS START</div>
+      <div class="start-title magic">PRESS START</div>
       <p class="start-sub">RPG Portfolio Mode</p>
       <button class="start-btn" id="startBtn">Start</button>
       <p class="start-hint muted">Tip: scroll to gain XP and unlock achievements.</p>
@@ -26,6 +32,7 @@
     <div class="brand">
       <div class="mark">ND</div>
       <span class="brandname">Notcontro1</span>
+      <span class="submark magic">guild page</span>
     </div>
 
     <div class="tabs" role="tablist" aria-label="Portfolio sections">
@@ -48,12 +55,12 @@
   </header>
 
   <main class="wrap" id="all">
-    <!-- RPG HUD -->
+    <!-- HUD -->
     <section class="hudbar reveal" id="hudbar">
       <div class="playercard tilt">
         <div class="pc-top">
           <div>
-            <div class="pc-name">Abdul Masyhur Deo</div>
+            <div class="pc-name titlefont">Abdul Masyhur Deo</div>
             <div class="pc-sub muted">NYP • Diploma in IT (Software Developer track)</div>
           </div>
           <span class="rank">LV <span id="level">1</span></span>
@@ -67,17 +74,26 @@
 
         <div class="xp">
           <div class="xp-label">
-            <span>XP</span>
+            <span class="titlefont">XP</span>
             <span class="muted"><span id="xpPct">0</span>%</span>
           </div>
           <div class="xpbar">
             <div class="xpfill" id="xpFill"></div>
           </div>
+
+          <!-- Heart palette bar -->
+          <div class="hearts" aria-hidden="true">
+            <span class="heart h1"></span>
+            <span class="heart h2"></span>
+            <span class="heart h3"></span>
+            <span class="heart h4"></span>
+            <span class="heart h5"></span>
+          </div>
         </div>
       </div>
 
       <div class="questlog tilt">
-        <div class="ql-title">Quest Log</div>
+        <div class="ql-title titlefont">Quest Log</div>
         <ul class="ql-list">
           <li class="ql-item" data-go="#projects">▶ View Projects</li>
           <li class="ql-item" data-go="#wdp">▶ Complete WDP Case Study</li>
@@ -85,7 +101,7 @@
         </ul>
 
         <div class="achievements">
-          <div class="ach-title">Achievements</div>
+          <div class="ach-title titlefont">Achievements</div>
           <div class="ach-grid">
             <span class="ach locked" id="ach1">First Scroll</span>
             <span class="ach locked" id="ach2">Project Hunter</span>
@@ -100,13 +116,13 @@
     <section class="hero">
       <div class="hero-left">
         <div class="chipline reveal">
-          <span class="chip small accentchip">Welcome to my universe</span>
+          <span class="chip small accentchip magic">welcome, adventurer</span>
           <span class="chip small softchip">Beginner Dev</span>
         </div>
 
         <h1 class="reveal">
-          <span class="hello">Hello</span><br/>
-          <span class="im">I’m</span> <span class="name">Abdul Masyhur Deo</span>
+          <span class="hello titlefont">Hello</span><br/>
+          <span class="im">I’m</span> <span class="name titlefont">Abdul Masyhur Deo</span>
         </h1>
 
         <div class="float-tags reveal">
@@ -117,7 +133,7 @@
         </div>
 
         <div class="rolecard reveal">
-          <div class="role-title">Software Developer (Student)</div>
+          <div class="role-title titlefont">Software Developer (Student)</div>
           <div class="role-sub">NYP • Diploma in Information Technology (Software Developer track)</div>
         </div>
 
@@ -139,7 +155,7 @@
         </div>
       </div>
 
-      <!-- WINDOWS-STYLE PANEL (replaces the Apple/mac code window) -->
+      <!-- Windows Terminal Panel -->
       <div class="hero-right reveal">
         <div class="winpanel tilt">
           <div class="winbar">
@@ -156,10 +172,10 @@
             <div class="out">Python, Flask, SQLite, HTML/CSS/JS, Bootstrap, Git/GitHub</div>
 
             <div class="line"><span class="muted">#</span> current_quest</div>
-            <div class="out">WDP Upload & Export module (CSV/XLSX → SQLite + filtered export)</div>
+            <div class="out">WDP Upload & Export (CSV/XLSX → SQLite + filtered export)</div>
 
             <div class="line"><span class="muted">#</span> status</div>
-            <div class="out accenttext">Ready to learn, ready to ship.</div>
+            <div class="out accenttext magic">ready to learn, ready to ship ✦</div>
           </div>
 
           <div class="winfade" aria-hidden="true"></div>
@@ -167,123 +183,183 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- PROJECTS (varied columns layout) -->
     <section id="projects" class="sectionblock reveal">
       <div class="sectionhead">
         <div>
-          <h2>Projects</h2>
-          <p class="muted">Quest board — click to expand each quest.</p>
+          <h2 class="titlefont">Projects</h2>
+          <p class="muted">Quest board — main quest + side quests.</p>
         </div>
-        <span class="sectionchip">QUESTS</span>
+        <span class="sectionchip magic">QUESTS</span>
       </div>
 
-      <div class="clump">
-        <details class="accordion tilt" open>
-          <summary>
-            <div class="sum-left">
-              <span class="badge2 accentbadge">Main Quest</span>
-              <strong>WDP — Upload & Export Module</strong>
-              <span class="muted smalltxt">Python • Flask • SQLite • Bootstrap</span>
+      <div class="twoCol">
+        <!-- Left: Main Quest (bigger) -->
+        <div class="colBig">
+          <details class="accordion tilt featured" open>
+            <summary>
+              <div class="sum-left">
+                <span class="badge2 accentbadge magic">Main Quest</span>
+                <strong>WDP — Upload & Export Module</strong>
+                <span class="muted smalltxt">Python • Flask • SQLite • Bootstrap</span>
+              </div>
+              <span class="sum-icon">+</span>
+            </summary>
+            <div class="acc-body">
+              <p class="muted">
+                Built an upload/import + export workflow: CSV/XLSX import into a central SQLite database,
+                location-based handling, upload history tracking, and filtered export.
+              </p>
+              <div class="acc-links">
+                <a class="link accentlink" href="#wdp">View Case Study →</a>
+                <a class="link" href="[WDP_REPO_LINK]" target="_blank" rel="noreferrer">Repo →</a>
+              </div>
             </div>
-            <span class="sum-icon">+</span>
-          </summary>
-          <div class="acc-body">
-            <p class="muted">
-              Built an upload/import + export workflow: CSV/XLSX import into a central SQLite database,
-              location-based handling, upload history tracking, and filtered export.
-            </p>
-            <div class="acc-links">
-              <a class="link accentlink" href="#wdp">View Case Study →</a>
-              <a class="link" href="[WDP_REPO_LINK]" target="_blank" rel="noreferrer">Repo →</a>
-            </div>
-          </div>
-        </details>
+          </details>
 
-        <details class="accordion tilt">
-          <summary>
-            <div class="sum-left">
-              <span class="badge2">Side Quest</span>
-              <strong>Project Heartcode (2023)</strong>
-              <span class="muted smalltxt">HTML • CSS • JavaScript • GitHub Pages</span>
+          <div class="miniGrid">
+            <div class="minicard tilt">
+              <div class="minititle magic">Loot</div>
+              <div class="muted">CSV/XLSX import, export filters, upload logs</div>
             </div>
-            <span class="sum-icon">+</span>
-          </summary>
-          <div class="acc-body">
-            <p class="muted">
-              Cyberbullying awareness website with Impact/Effects/Prevention pages,
-              scroll-triggered text animations, and a light/dark theme toggle.
-            </p>
-            <div class="acc-links">
-              <a class="link accentlink" href="https://ttinten.github.io/Project-Heartcode/index.html" target="_blank" rel="noreferrer">Live →</a>
-              <a class="link" href="[HEARTCODE_REPO_LINK]" target="_blank" rel="noreferrer">Repo →</a>
+            <div class="minicard tilt">
+              <div class="minititle magic">Boss Fight</div>
+              <div class="muted">Data consistency + schema handling</div>
             </div>
           </div>
-        </details>
+        </div>
+
+        <!-- Right: Side Quests (stacked) -->
+        <div class="colSmall">
+          <details class="accordion tilt">
+            <summary>
+              <div class="sum-left">
+                <span class="badge2 magic">Side Quest</span>
+                <strong>Project Heartcode (2023)</strong>
+                <span class="muted smalltxt">HTML • CSS • JavaScript • GitHub Pages</span>
+              </div>
+              <span class="sum-icon">+</span>
+            </summary>
+            <div class="acc-body">
+              <p class="muted">
+                Cyberbullying awareness website with Impact/Effects/Prevention pages,
+                scroll-triggered text animations, and a light/dark theme toggle.
+              </p>
+              <div class="acc-links">
+                <a class="link accentlink" href="https://ttinten.github.io/Project-Heartcode/index.html" target="_blank" rel="noreferrer">Live →</a>
+                <a class="link" href="[HEARTCODE_REPO_LINK]" target="_blank" rel="noreferrer">Repo →</a>
+              </div>
+            </div>
+          </details>
+
+          <div class="panel tilt">
+            <div class="panelhead">
+              <span class="magic">Next Quests</span>
+              <span class="muted smalltxt">planned upgrades</span>
+            </div>
+            <ul class="list">
+              <li>More project screenshots + write-ups</li>
+              <li>Better UI transitions + loading states</li>
+              <li>More data validation / error handling</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
+    <!-- EXPERIENCE (columns) -->
     <section id="experience" class="sectionblock reveal">
       <div class="sectionhead">
         <div>
-          <h2>Experience</h2>
-          <p class="muted">Party roles — teamwork, reliability, leadership.</p>
+          <h2 class="titlefont">Experience</h2>
+          <p class="muted">Party roles — split into work + leadership.</p>
         </div>
-        <span class="sectionchip">PARTY</span>
+        <span class="sectionchip magic">PARTY</span>
       </div>
 
-      <div class="clump">
-        <details class="accordion tilt" open>
-          <summary>
-            <div class="sum-left">
-              <span class="badge2 accentbadge">Work</span>
-              <strong>McDonald’s Singapore — Part-Time Crew</strong>
-              <span class="muted smalltxt">Bukit Panjang Plaza • 2024 – Present</span>
+      <div class="twoCol alt">
+        <div class="colSmall">
+          <div class="panel tilt">
+            <div class="panelhead">
+              <span class="magic">Work Role</span>
+              <span class="muted smalltxt">reliability</span>
             </div>
-            <span class="sum-icon">+</span>
-          </summary>
-          <div class="acc-body">
-            <ul class="list">
-              <li>Rotated across cashier, kitchen, runner, and McCafé stations during peak periods.</li>
-              <li>Coordinated handovers and checks to reduce missing items and delays.</li>
-            </ul>
+            <details class="accordion tilt" open>
+              <summary>
+                <div class="sum-left">
+                  <span class="badge2 accentbadge magic">McDonald’s</span>
+                  <strong>Part-Time Crew</strong>
+                  <span class="muted smalltxt">Bukit Panjang Plaza • 2024 – Present</span>
+                </div>
+                <span class="sum-icon">+</span>
+              </summary>
+              <div class="acc-body">
+                <ul class="list">
+                  <li>Rotated across cashier, kitchen, runner, and McCafé stations during peak periods.</li>
+                  <li>Coordinated handovers and checks to reduce missing items and delays.</li>
+                </ul>
+              </div>
+            </details>
           </div>
-        </details>
+        </div>
 
-        <details class="accordion tilt">
-          <summary>
-            <div class="sum-left">
-              <span class="badge2">Leadership</span>
-              <strong>NRPC Robotics — OIC</strong>
-              <span class="muted smalltxt">Student Activity</span>
+        <div class="colBig">
+          <div class="panel tilt">
+            <div class="panelhead">
+              <span class="magic">Leadership Role</span>
+              <span class="muted smalltxt">coordination</span>
             </div>
-            <span class="sum-icon">+</span>
-          </summary>
-          <div class="acc-body">
-            <ul class="list">
-              <li>Coordinated tasks and supported troubleshooting during robot build and testing.</li>
-              <li>Helped align the team and track progress during key milestones.</li>
-            </ul>
+            <details class="accordion tilt" open>
+              <summary>
+                <div class="sum-left">
+                  <span class="badge2 magic">NRPC Robotics</span>
+                  <strong>OIC</strong>
+                  <span class="muted smalltxt">Student Activity</span>
+                </div>
+                <span class="sum-icon">+</span>
+              </summary>
+              <div class="acc-body">
+                <ul class="list">
+                  <li>Coordinated tasks and supported troubleshooting during robot build and testing.</li>
+                  <li>Helped align the team and track progress during key milestones.</li>
+                </ul>
+              </div>
+            </details>
+
+            <div class="miniGrid three">
+              <div class="minicard tilt">
+                <div class="minititle magic">Trait</div>
+                <div class="muted">Calm under pressure</div>
+              </div>
+              <div class="minicard tilt">
+                <div class="minititle magic">Trait</div>
+                <div class="muted">Team coordination</div>
+              </div>
+              <div class="minicard tilt">
+                <div class="minititle magic">Trait</div>
+                <div class="muted">Quick troubleshooting</div>
+              </div>
+            </div>
           </div>
-        </details>
+        </div>
       </div>
     </section>
 
-    <!-- ABOUT (no resume) -->
+    <!-- ABOUT -->
     <section id="about" class="sectionblock reveal">
       <div class="sectionhead">
         <div>
-          <h2>About</h2>
-          <p class="muted">Loadout — tools, focus, and quick stats.</p>
+          <h2 class="titlefont">About</h2>
+          <p class="muted">Loadout — tools + focus.</p>
         </div>
-        <span class="sectionchip">LOADOUT</span>
+        <span class="sectionchip magic">LOADOUT</span>
       </div>
 
       <div class="grid3">
         <div class="card2 tilt">
           <div class="cardhead2">
             <div>
-              <h3>Tech Stack</h3>
+              <h3 class="titlefont">Tech Stack</h3>
               <p class="muted">Tools I use often</p>
             </div>
             <div class="miniicon accenticon">⌘</div>
@@ -303,22 +379,22 @@
         <div class="card2 tilt">
           <div class="cardhead2">
             <div>
-              <h3>Focus</h3>
-              <p class="muted">What I enjoy building</p>
+              <h3 class="titlefont">Focus</h3>
+              <p class="muted">What I enjoy</p>
             </div>
             <div class="miniicon">▣</div>
           </div>
           <ul class="list">
             <li>Import/export pipelines (CSV/XLSX)</li>
             <li>SQLite schema + clean queries</li>
-            <li>UI that feels “smooth” to use</li>
+            <li>UI that feels smooth to use</li>
           </ul>
         </div>
 
         <div class="card2 tilt">
           <div class="cardhead2">
             <div>
-              <h3>Stats</h3>
+              <h3 class="titlefont">Stats</h3>
               <p class="muted">Gamer HUD</p>
             </div>
             <div class="miniicon">◎</div>
@@ -335,26 +411,26 @@
     <!-- WDP CASE STUDY -->
     <section id="wdp" class="case reveal">
       <div class="casehead">
-        <h2>Case Study — WDP Upload & Export</h2>
+        <h2 class="titlefont">Case Study — WDP Upload & Export</h2>
         <p class="muted">Add screenshots later (upload into /assets and swap placeholders).</p>
       </div>
 
       <div class="casegrid">
         <div class="casepanel tilt">
-          <h4>Goal</h4>
+          <h4 class="titlefont">Goal</h4>
           <p class="muted">Make importing and exporting sales data reliable and traceable for the web app.</p>
 
-          <h4>What I built</h4>
+          <h4 class="titlefont">What I built</h4>
           <ul class="list">
             <li>CSV/XLSX import into centralised SQLite database</li>
-            <li>Location-based handling (correct outlet data updates)</li>
+            <li>Location-based handling</li>
             <li>Upload history log</li>
             <li>Filtered export for reporting</li>
           </ul>
         </div>
 
         <div class="casepanel tilt">
-          <h4>Process</h4>
+          <h4 class="titlefont">Process</h4>
           <ul class="list">
             <li>Clarified data formats + required fields</li>
             <li>Designed import flow + DB schema handling</li>
@@ -373,7 +449,7 @@
 
     <!-- CONTACT -->
     <section id="contact" class="contact reveal">
-      <h2>Contact</h2>
+      <h2 class="titlefont">Contact</h2>
       <div class="contactbox tilt">
         <p><strong>Email:</strong> <a class="accentlink" href="mailto:[YOUR_EMAIL]">[YOUR_EMAIL]</a></p>
         <p><strong>GitHub:</strong> <a class="accentlink" href="[GITHUB_LINK]" target="_blank" rel="noreferrer">[GITHUB_LINK]</a></p>
@@ -387,7 +463,6 @@
   </main>
 
   <script>
-    // Footer year
     document.getElementById("y").textContent = new Date().getFullYear();
 
     // Press Start overlay
