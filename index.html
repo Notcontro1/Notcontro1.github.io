@@ -6,226 +6,295 @@
   <title>Abdul Masyhur Deo | Software Developer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <!-- Background FX layers -->
   <div class="bg-grid" aria-hidden="true"></div>
   <div class="bg-noise" aria-hidden="true"></div>
 
-  <header class="nav" id="nav">
-    <div class="logo">NOTCONTRO1</div>
-    <nav class="navlinks">
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#exp">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <!-- Top bar -->
+  <header class="topbar" id="topbar">
+    <div class="brand">
+      <div class="mark">ND</div>
+      <span class="brandname">Notcontro1</span>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Portfolio sections">
+      <button class="tab is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="tab" data-filter="experience" role="tab">Experience</button>
+      <button class="tab" data-filter="projects" role="tab">Projects</button>
+      <button class="tab" data-filter="about" role="tab">About</button>
+    </div>
+
+    <div class="actions">
+      <a class="pill" href="[RESUME_PDF_LINK]" target="_blank" rel="noreferrer">Resume</a>
+      <a class="iconbtn" href="[GITHUB_LINK]" target="_blank" rel="noreferrer" aria-label="GitHub">
+        <span class="icon">⌂</span>
+      </a>
+      <button class="iconbtn" id="themeBtn" aria-label="Toggle theme">
+        <span class="icon">◐</span>
+      </button>
+    </div>
   </header>
 
   <main class="wrap">
     <!-- HERO -->
-    <section class="hero reveal">
-      <p class="tag">NYP • Diploma in Information Technology (Software Developer track)</p>
+    <section class="hero">
+      <div class="hero-left">
+        <div class="chipline reveal">
+          <span class="chip small">Welcome to my universe</span>
+        </div>
 
-      <h1 class="title">
-        <span class="muted">Hi, I’m</span>
-        <span class="type" id="type"></span><span class="cursor">|</span>
-      </h1>
+        <h1 class="reveal">
+          <span class="hello">Hello</span><br/>
+          <span class="im">I’m</span> <span class="name">Abdul Masyhur Deo</span>
+        </h1>
 
-      <p class="sub">
-        Beginner-friendly developer portfolio with a clean, gamer-style UI.
-        I build practical web features and focus on making workflows smooth for users.
-      </p>
+        <div class="float-tags reveal">
+          <span class="tag">Clean Code</span>
+          <span class="tag">Database</span>
+          <span class="tag">Web Dev</span>
+          <span class="tag">UI Polish</span>
+        </div>
 
-      <div class="btns">
-        <a class="btn primary" href="#projects">View Projects</a>
-        <a class="btn" href="[RESUME_PDF_LINK]" target="_blank" rel="noreferrer">Resume (PDF)</a>
-        <a class="btn" href="[GITHUB_LINK]" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="btn" href="[LINKEDIN_LINK]" target="_blank" rel="noreferrer">LinkedIn</a>
+        <div class="rolecard reveal">
+          <div class="role-title">Software Developer (Student)</div>
+          <div class="role-sub">NYP • Diploma in Information Technology (Software Developer track)</div>
+        </div>
+
+        <p class="desc reveal">
+          Beginner-friendly portfolio with a gamer/HUD vibe. I like building practical web features,
+          especially around data handling (import/export), and making interfaces feel clean and smooth.
+        </p>
+
+        <div class="cta reveal">
+          <a class="btn primary" href="#cards">Explore</a>
+          <a class="btn" href="#projects">Projects</a>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+
+        <div class="social reveal">
+          <a class="sbtn" href="[GITHUB_LINK]" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="sbtn" href="[LINKEDIN_LINK]" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="sbtn" href="mailto:[YOUR_EMAIL]">Email</a>
+        </div>
       </div>
 
-      <div class="hud">
-        <div class="hudbox">
-          <span>STATUS</span>
-          Studying at NYP
-        </div>
-        <div class="hudbox">
-          <span>FOCUS</span>
-          Web Dev • Databases
-        </div>
-        <div class="hudbox">
-          <span>OPEN TO</span>
-          Internships / Entry Roles
+      <div class="hero-right reveal">
+        <div class="codewindow tilt">
+          <div class="codebar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="code-title">profile.js</span>
+          </div>
+
+          <pre class="code">
+<span class="k">const</span> <span class="v">profile</span> <span class="k">=</span> {
+  <span class="p">name</span>: <span class="s">"Abdul Masyhur Deo"</span>,
+  <span class="p">title</span>: <span class="s">"Software Developer (Student)"</span>,
+  <span class="p">school</span>: <span class="s">"NYP — Diploma in IT"</span>,
+  <span class="p">focus</span>: [<span class="s">"Flask"</span>, <span class="s">"SQLite"</span>, <span class="s">"Web UI"</span>],
+  <span class="p">traits</span>: { <span class="p">quickLearner</span>: <span class="b">true</span>, <span class="p">teamPlayer</span>: <span class="b">true</span> },
+  <span class="p">hireable</span>: () <span class="k">=&gt;</span> <span class="b">true</span>
+};
+          </pre>
+
+          <div class="codefade" aria-hidden="true"></div>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section segment segment-1 reveal">
-      <div class="section-head">
-        <h2>Projects</h2>
-        <p class="muted">Case studies with what I built, how I built it, and the outcome.</p>
-      </div>
-
+    <!-- CARDS GRID (like example) -->
+    <section id="cards" class="gridWrap reveal">
       <div class="grid">
-        <article class="card reveal">
-          <div class="cardtop">
-            <h3>WDP – Upload & Export Module</h3>
-            <span class="chip">Python • Flask • SQLite</span>
+        <!-- Resume card -->
+        <article class="card big filterable" data-kind="about">
+          <div class="cardhead">
+            <div>
+              <h3>Resume</h3>
+              <p class="muted">(Click to download)</p>
+            </div>
+            <div class="miniicon">⤓</div>
           </div>
-
-          <p>
-            Imports CSV/XLSX into a central SQLite database with location-based handling,
-            upload history tracking, and filtered exports.
+          <p class="muted">
+            A quick summary of my education, projects, experience, and skills — available as a PDF.
           </p>
+          <a class="link" href="[RESUME_PDF_LINK]" target="_blank" rel="noreferrer">Download my Resume →</a>
+        </article>
 
-          <div class="links">
-            <a href="#wdp">Case Study</a>
-            <a href="[WDP_REPO_LINK]" target="_blank" rel="noreferrer">Repo</a>
+        <!-- Tech stack card -->
+        <article class="card big filterable" data-kind="about">
+          <div class="cardhead">
+            <div>
+              <h3>Tech Stack</h3>
+              <p class="muted">Tools I use often</p>
+            </div>
+            <div class="miniicon">⌘</div>
+          </div>
+          <div class="stack">
+            <span class="badge">Python</span>
+            <span class="badge">Flask</span>
+            <span class="badge">SQLite</span>
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">Bootstrap</span>
+            <span class="badge">GitHub</span>
           </div>
         </article>
 
-        <article class="card reveal">
-          <div class="cardtop">
-            <h3>Project Heartcode (2023)</h3>
-            <span class="chip">HTML • CSS • JS</span>
+        <!-- Gamer stat card -->
+        <article class="card big filterable" data-kind="about">
+          <div class="cardhead">
+            <div>
+              <h3>Stats</h3>
+              <p class="muted">Gamer HUD style</p>
+            </div>
+            <div class="miniicon">▣</div>
           </div>
+          <div class="stats">
+            <div class="stat">
+              <span class="label">Class</span>
+              <span class="value">Software Dev</span>
+            </div>
+            <div class="stat">
+              <span class="label">Mode</span>
+              <span class="value">Build • Test • Improve</span>
+            </div>
+            <div class="stat">
+              <span class="label">Current Quest</span>
+              <span class="value">WDP Web App</span>
+            </div>
+          </div>
+        </article>
 
-          <p>
-            Cyberbullying awareness site (Impact / Effects / Prevention) with scroll-triggered
-            text animations and a light/dark theme toggle.
+        <!-- Projects -->
+        <article id="projects" class="card wide filterable" data-kind="projects">
+          <div class="cardhead">
+            <div>
+              <h3>WDP – Upload & Export Module</h3>
+              <p class="muted">Python • Flask • Jinja2 • SQLite • Bootstrap</p>
+            </div>
+            <div class="miniicon">⚙</div>
+          </div>
+          <p class="muted">
+            Built an upload/import + export workflow: CSV/XLSX import into a central SQLite database,
+            location-based handling, upload history tracking, and filtered export.
           </p>
-
-          <div class="links">
-            <a href="https://ttinten.github.io/Project-Heartcode/index.html" target="_blank" rel="noreferrer">Live</a>
-            <a href="[HEARTCODE_REPO_LINK]" target="_blank" rel="noreferrer">Repo</a>
+          <div class="cardlinks">
+            <a class="link" href="#wdp">View Case Study →</a>
+            <a class="link" href="[WDP_REPO_LINK]" target="_blank" rel="noreferrer">Repo →</a>
           </div>
+        </article>
+
+        <article class="card wide filterable" data-kind="projects">
+          <div class="cardhead">
+            <div>
+              <h3>Project Heartcode (2023)</h3>
+              <p class="muted">HTML • CSS • JavaScript • GitHub Pages</p>
+            </div>
+            <div class="miniicon">◆</div>
+          </div>
+          <p class="muted">
+            Cyberbullying awareness website with Impact/Effects/Prevention pages, scroll-triggered
+            text animations, and a light/dark theme toggle.
+          </p>
+          <div class="cardlinks">
+            <a class="link" href="https://ttinten.github.io/Project-Heartcode/index.html" target="_blank" rel="noreferrer">Live →</a>
+            <a class="link" href="[HEARTCODE_REPO_LINK]" target="_blank" rel="noreferrer">Repo →</a>
+          </div>
+        </article>
+
+        <!-- Experience -->
+        <article class="card wide filterable" data-kind="experience">
+          <div class="cardhead">
+            <div>
+              <h3>McDonald’s Singapore — Part-Time Crew</h3>
+              <p class="muted">Bukit Panjang Plaza • 2024 – Present</p>
+            </div>
+            <div class="miniicon">▦</div>
+          </div>
+          <ul class="list">
+            <li>Rotated across cashier, kitchen, runner, and McCafé stations during peak periods.</li>
+            <li>Supported smooth operations by coordinating handovers and checks to reduce delays.</li>
+          </ul>
+        </article>
+
+        <article class="card wide filterable" data-kind="experience">
+          <div class="cardhead">
+            <div>
+              <h3>NRPC Robotics — OIC</h3>
+              <p class="muted">Student Activity</p>
+            </div>
+            <div class="miniicon">⬡</div>
+          </div>
+          <ul class="list">
+            <li>Coordinated tasks and supported troubleshooting during robot build and testing.</li>
+            <li>Helped align the team and track progress during key milestones.</li>
+          </ul>
+        </article>
+
+        <!-- About -->
+        <article class="card wide filterable" data-kind="about">
+          <div class="cardhead">
+            <div>
+              <h3>About Me</h3>
+              <p class="muted">Short + straight</p>
+            </div>
+            <div class="miniicon">◎</div>
+          </div>
+          <p class="muted">
+            I’m currently studying at NYP. I enjoy backend + database work, and I like polishing UI so
+            the user flow feels clean. I’m looking for internships/entry roles where I can learn and contribute.
+          </p>
         </article>
       </div>
     </section>
 
     <!-- WDP CASE STUDY -->
-    <section id="wdp" class="section segment segment-2 reveal">
-      <div class="section-head">
-        <h2>Case Study: WDP Upload & Export</h2>
-        <p class="muted">What I built + process + outcome (add screenshots when ready).</p>
+    <section id="wdp" class="case reveal">
+      <div class="casehead">
+        <h2>Case Study — WDP Upload & Export</h2>
+        <p class="muted">Add screenshots later (upload into /assets and swap placeholders).</p>
       </div>
 
-      <div class="twocol">
-        <div class="panel reveal">
-          <h4>Overview</h4>
-          <p>
-            Built an Upload & Export workflow for a web app to import sales data (CSV/XLSX)
-            into a central SQLite database and export filtered datasets for reporting.
+      <div class="casegrid">
+        <div class="casepanel tilt">
+          <h4>Goal</h4>
+          <p class="muted">
+            Make importing and exporting sales data reliable and traceable for the web app.
           </p>
 
-          <h4>My Role</h4>
-          <ul>
-            <li>Designed routes and logic for import/export workflow</li>
-            <li>Handled database table setup / data insert flows</li>
-            <li>Added upload history tracking and export filters</li>
-          </ul>
-
-          <h4>Outcome</h4>
-          <ul>
-            <li>Cleaner data handling (less manual merge)</li>
-            <li>Traceable uploads through history logs</li>
-            <li>Faster export of the right data using filters</li>
+          <h4>What I built</h4>
+          <ul class="list">
+            <li>CSV/XLSX import into centralised SQLite database</li>
+            <li>Location-based handling (correct outlet data updates)</li>
+            <li>Upload history log</li>
+            <li>Filtered export for reporting</li>
           </ul>
         </div>
 
-        <div class="panel reveal">
-          <h4>Key Features</h4>
-          <ul>
-            <li>CSV/XLSX import to centralised SQLite database</li>
-            <li>Location-based data handling</li>
-            <li>Upload history tracking</li>
-            <li>Filtered export (by location/date/type)</li>
+        <div class="casepanel tilt">
+          <h4>Process</h4>
+          <ul class="list">
+            <li>Clarified data formats + required fields</li>
+            <li>Designed import flow + DB schema handling</li>
+            <li>Implemented export filters for usability</li>
+            <li>Tested with sample files to ensure data correctness</li>
           </ul>
 
-          <h4>Screenshots (add later)</h4>
           <div class="shots">
             <div class="shot">Upload Page</div>
             <div class="shot">Database Preview</div>
             <div class="shot">Export Filters</div>
           </div>
-
-          <p class="muted tiny">
-            Tip: upload images into <code>/assets</code> and replace these placeholders with &lt;img&gt; tags.
-          </p>
         </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section segment segment-3 reveal">
-      <div class="section-head">
-        <h2>Skills</h2>
-        <p class="muted">Simple list, no fluff.</p>
-      </div>
-
-      <div class="grid">
-        <div class="panel reveal">
-          <h4>Web</h4>
-          <p>HTML, CSS, JavaScript, Bootstrap</p>
-        </div>
-        <div class="panel reveal">
-          <h4>Backend</h4>
-          <p>Python, Flask (Blueprints), Jinja2</p>
-        </div>
-        <div class="panel reveal">
-          <h4>Database</h4>
-          <p>SQLite, SQL fundamentals</p>
-        </div>
-        <div class="panel reveal">
-          <h4>Tools</h4>
-          <p>Git/GitHub, VS Code, DBeaver</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="exp" class="section segment segment-4 reveal">
-      <div class="section-head">
-        <h2>Experience</h2>
-        <p class="muted">Work + leadership that shows teamwork and reliability.</p>
-      </div>
-
-      <div class="stack">
-        <div class="row reveal">
-          <div>
-            <h3>McDonald’s Singapore — Part-Time Crew</h3>
-            <p class="muted">Bukit Panjang Plaza • 2024 – Present</p>
-          </div>
-          <span class="chip">Cashier • Kitchen • Runner • McCafé</span>
-        </div>
-        <ul class="reveal">
-          <li>Rotated across stations during peak hours to keep operations smooth and accurate.</li>
-          <li>Coordinated order handovers and checks to reduce missing items and delays.</li>
-        </ul>
-
-        <div class="row reveal">
-          <div>
-            <h3>NRPC Robotics — OIC</h3>
-            <p class="muted">Student Activity</p>
-          </div>
-          <span class="chip">Leadership</span>
-        </div>
-        <ul class="reveal">
-          <li>Coordinated tasks and supported troubleshooting during build and testing.</li>
-          <li>Helped keep progress on track by checking blockers and aligning the team.</li>
-        </ul>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section segment segment-5 reveal">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <p class="muted">Best way to reach me is email.</p>
-      </div>
-
-      <div class="contactbox reveal">
+    <section id="contact" class="contact reveal">
+      <h2>Contact</h2>
+      <div class="contactbox tilt">
         <p><strong>Email:</strong> <a href="mailto:[YOUR_EMAIL]">[YOUR_EMAIL]</a></p>
         <p><strong>GitHub:</strong> <a href="[GITHUB_LINK]" target="_blank" rel="noreferrer">[GITHUB_LINK]</a></p>
         <p><strong>LinkedIn:</strong> <a href="[LINKEDIN_LINK]" target="_blank" rel="noreferrer">[LINKEDIN_LINK]</a></p>
@@ -233,7 +302,7 @@
     </section>
 
     <footer class="footer">
-      <p>© <span id="y"></span> Abdul Masyhur Deo • Built on GitHub Pages</p>
+      <p>© <span id="y"></span> Abdul Masyhur Deo • GitHub Pages</p>
     </footer>
   </main>
 
@@ -241,20 +310,8 @@
     // Footer year
     document.getElementById("y").textContent = new Date().getFullYear();
 
-    // Typewriter (monotone, subtle)
-    const nameText = "Abdul Masyhur Deo";
-    const el = document.getElementById("type");
-    let i = 0;
-    function type() {
-      if (i <= nameText.length) {
-        el.textContent = nameText.slice(0, i++);
-        setTimeout(type, 55);
-      }
-    }
-    type();
-
-    // Scroll reveal animations
-    const items = document.querySelectorAll(".reveal");
+    // Scroll reveal
+    const revealItems = document.querySelectorAll(".reveal");
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -263,14 +320,53 @@
         }
       });
     }, { threshold: 0.12 });
+    revealItems.forEach(x => io.observe(x));
 
-    items.forEach(x => io.observe(x));
-
-    // Nav shadow when scrolling
-    const nav = document.getElementById("nav");
+    // topbar shadow on scroll
+    const topbar = document.getElementById("topbar");
     window.addEventListener("scroll", () => {
-      nav.classList.toggle("scrolled", window.scrollY > 6);
+      topbar.classList.toggle("scrolled", window.scrollY > 6);
+    });
+
+    // Tabs filter (All / Experience / Projects / About)
+    const tabs = document.querySelectorAll(".tab");
+    const cards = document.querySelectorAll(".filterable");
+    tabs.forEach(t => t.addEventListener("click", () => {
+      tabs.forEach(x => x.classList.remove("is-active"));
+      t.classList.add("is-active");
+      const f = t.dataset.filter;
+
+      cards.forEach(c => {
+        const kind = c.dataset.kind;
+        const show = (f === "all") || (kind === f);
+        c.style.display = show ? "" : "none";
+      });
+
+      // little scroll nudge so it feels responsive
+      document.getElementById("cards").scrollIntoView({behavior:"smooth", block:"start"});
+    }));
+
+    // Hover tilt
+    const tilts = document.querySelectorAll(".tilt");
+    tilts.forEach(el => {
+      el.addEventListener("mousemove", (e) => {
+        const r = el.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        el.style.transform = `translateY(-2px) rotateX(${(-y * 6).toFixed(2)}deg) rotateY(${(x * 6).toFixed(2)}deg)`;
+      });
+      el.addEventListener("mouseleave", () => {
+        el.style.transform = "";
+      });
+    });
+
+    // Theme toggle (still monotone; slightly lighter)
+    const themeBtn = document.getElementById("themeBtn");
+    themeBtn.addEventListener("click", () => {
+      document.documentElement.classList.toggle("lightish");
     });
   </script>
+</body>
+</html>
 </body>
 </html>
