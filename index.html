@@ -33,10 +33,11 @@
       <button class="tab" data-go="#experience" role="tab">Experience</button>
       <button class="tab" data-go="#projects" role="tab">Projects</button>
       <button class="tab" data-go="#about" role="tab">About</button>
+      <button class="tab" data-go="#contact" role="tab">Contact</button>
     </div>
 
     <div class="actions">
-      <a class="pill" href="[RESUME_PDF_LINK]" target="_blank" rel="noreferrer">Resume</a>
+      <a class="pill accent" href="#contact">Hire / Contact</a>
       <a class="iconbtn" href="[GITHUB_LINK]" target="_blank" rel="noreferrer" aria-label="GitHub">
         <span class="icon">⌂</span>
       </a>
@@ -99,7 +100,8 @@
     <section class="hero">
       <div class="hero-left">
         <div class="chipline reveal">
-          <span class="chip small">Welcome to my universe</span>
+          <span class="chip small accentchip">Welcome to my universe</span>
+          <span class="chip small softchip">Beginner Dev</span>
         </div>
 
         <h1 class="reveal">
@@ -109,8 +111,8 @@
 
         <div class="float-tags reveal">
           <span class="tag">Clean Code</span>
-          <span class="tag">Database</span>
-          <span class="tag">Web Dev</span>
+          <span class="tag">SQLite</span>
+          <span class="tag">Flask</span>
           <span class="tag">UI Polish</span>
         </div>
 
@@ -120,8 +122,8 @@
         </div>
 
         <p class="desc reveal">
-          Beginner-friendly portfolio with a gamer/HUD vibe. I like building practical web features,
-          especially around data handling (import/export), and making interfaces feel clean and smooth.
+          I like building practical web features, especially around data handling (import/export),
+          and making interfaces feel smooth and clean. Still learning, but consistent.
         </p>
 
         <div class="cta reveal">
@@ -137,36 +139,40 @@
         </div>
       </div>
 
+      <!-- WINDOWS-STYLE PANEL (replaces the Apple/mac code window) -->
       <div class="hero-right reveal">
-        <div class="codewindow tilt">
-          <div class="codebar">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
-            <span class="code-title">profile.js</span>
+        <div class="winpanel tilt">
+          <div class="winbar">
+            <span class="winapp">Windows Terminal</span>
+            <span class="wincontrols" aria-hidden="true">— □ ✕</span>
           </div>
 
-          <pre class="code">
-<span class="k">const</span> <span class="v">profile</span> <span class="k">=</span> {
-  <span class="p">name</span>: <span class="s">"Abdul Masyhur Deo"</span>,
-  <span class="p">title</span>: <span class="s">"Software Developer (Student)"</span>,
-  <span class="p">school</span>: <span class="s">"NYP — Diploma in IT"</span>,
-  <span class="p">quests</span>: [<span class="s">"WDP Upload & Export"</span>, <span class="s">"Project Heartcode"</span>],
-  <span class="p">hireable</span>: () <span class="k">=&gt;</span> <span class="b">true</span>
-};
-          </pre>
+          <div class="terminal">
+            <div class="prompt muted">PS C:\Users\Abdul&gt;</div>
+            <div class="line"><span class="muted">#</span> whoami</div>
+            <div class="out">Student • Software Dev track</div>
 
-          <div class="codefade" aria-hidden="true"></div>
+            <div class="line"><span class="muted">#</span> skills</div>
+            <div class="out">Python, Flask, SQLite, HTML/CSS/JS, Bootstrap, Git/GitHub</div>
+
+            <div class="line"><span class="muted">#</span> current_quest</div>
+            <div class="out">WDP Upload & Export module (CSV/XLSX → SQLite + filtered export)</div>
+
+            <div class="line"><span class="muted">#</span> status</div>
+            <div class="out accenttext">Ready to learn, ready to ship.</div>
+          </div>
+
+          <div class="winfade" aria-hidden="true"></div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION CLUMPS -->
+    <!-- PROJECTS -->
     <section id="projects" class="sectionblock reveal">
       <div class="sectionhead">
         <div>
           <h2>Projects</h2>
-          <p class="muted">Your quest board — click to expand each quest.</p>
+          <p class="muted">Quest board — click to expand each quest.</p>
         </div>
         <span class="sectionchip">QUESTS</span>
       </div>
@@ -175,7 +181,7 @@
         <details class="accordion tilt" open>
           <summary>
             <div class="sum-left">
-              <span class="badge2">Main Quest</span>
+              <span class="badge2 accentbadge">Main Quest</span>
               <strong>WDP — Upload & Export Module</strong>
               <span class="muted smalltxt">Python • Flask • SQLite • Bootstrap</span>
             </div>
@@ -187,7 +193,7 @@
               location-based handling, upload history tracking, and filtered export.
             </p>
             <div class="acc-links">
-              <a class="link" href="#wdp">View Case Study →</a>
+              <a class="link accentlink" href="#wdp">View Case Study →</a>
               <a class="link" href="[WDP_REPO_LINK]" target="_blank" rel="noreferrer">Repo →</a>
             </div>
           </div>
@@ -204,11 +210,11 @@
           </summary>
           <div class="acc-body">
             <p class="muted">
-              Cyberbullying awareness website with Impact/Effects/Prevention pages, scroll-triggered text animations,
-              and a light/dark theme toggle.
+              Cyberbullying awareness website with Impact/Effects/Prevention pages,
+              scroll-triggered text animations, and a light/dark theme toggle.
             </p>
             <div class="acc-links">
-              <a class="link" href="https://ttinten.github.io/Project-Heartcode/index.html" target="_blank" rel="noreferrer">Live →</a>
+              <a class="link accentlink" href="https://ttinten.github.io/Project-Heartcode/index.html" target="_blank" rel="noreferrer">Live →</a>
               <a class="link" href="[HEARTCODE_REPO_LINK]" target="_blank" rel="noreferrer">Repo →</a>
             </div>
           </div>
@@ -216,6 +222,7 @@
       </div>
     </section>
 
+    <!-- EXPERIENCE -->
     <section id="experience" class="sectionblock reveal">
       <div class="sectionhead">
         <div>
@@ -229,7 +236,7 @@
         <details class="accordion tilt" open>
           <summary>
             <div class="sum-left">
-              <span class="badge2">Work</span>
+              <span class="badge2 accentbadge">Work</span>
               <strong>McDonald’s Singapore — Part-Time Crew</strong>
               <span class="muted smalltxt">Bukit Panjang Plaza • 2024 – Present</span>
             </div>
@@ -262,11 +269,12 @@
       </div>
     </section>
 
+    <!-- ABOUT (no resume) -->
     <section id="about" class="sectionblock reveal">
       <div class="sectionhead">
         <div>
           <h2>About</h2>
-          <p class="muted">Loadout — resume, tools, and quick stats.</p>
+          <p class="muted">Loadout — tools, focus, and quick stats.</p>
         </div>
         <span class="sectionchip">LOADOUT</span>
       </div>
@@ -275,24 +283,10 @@
         <div class="card2 tilt">
           <div class="cardhead2">
             <div>
-              <h3>Resume</h3>
-              <p class="muted">(Click to download)</p>
-            </div>
-            <div class="miniicon">⤓</div>
-          </div>
-          <p class="muted">
-            A quick summary of my education, projects, experience, and skills — available as a PDF.
-          </p>
-          <a class="link" href="[RESUME_PDF_LINK]" target="_blank" rel="noreferrer">Download my Resume →</a>
-        </div>
-
-        <div class="card2 tilt">
-          <div class="cardhead2">
-            <div>
               <h3>Tech Stack</h3>
               <p class="muted">Tools I use often</p>
             </div>
-            <div class="miniicon">⌘</div>
+            <div class="miniicon accenticon">⌘</div>
           </div>
           <div class="stack">
             <span class="badge">Python</span>
@@ -309,10 +303,25 @@
         <div class="card2 tilt">
           <div class="cardhead2">
             <div>
+              <h3>Focus</h3>
+              <p class="muted">What I enjoy building</p>
+            </div>
+            <div class="miniicon">▣</div>
+          </div>
+          <ul class="list">
+            <li>Import/export pipelines (CSV/XLSX)</li>
+            <li>SQLite schema + clean queries</li>
+            <li>UI that feels “smooth” to use</li>
+          </ul>
+        </div>
+
+        <div class="card2 tilt">
+          <div class="cardhead2">
+            <div>
               <h3>Stats</h3>
               <p class="muted">Gamer HUD</p>
             </div>
-            <div class="miniicon">▣</div>
+            <div class="miniicon">◎</div>
           </div>
           <div class="stats">
             <div class="stat"><span class="label">Class</span><span class="value">Software Dev</span></div>
@@ -366,9 +375,9 @@
     <section id="contact" class="contact reveal">
       <h2>Contact</h2>
       <div class="contactbox tilt">
-        <p><strong>Email:</strong> <a href="mailto:[YOUR_EMAIL]">[YOUR_EMAIL]</a></p>
-        <p><strong>GitHub:</strong> <a href="[GITHUB_LINK]" target="_blank" rel="noreferrer">[GITHUB_LINK]</a></p>
-        <p><strong>LinkedIn:</strong> <a href="[LINKEDIN_LINK]" target="_blank" rel="noreferrer">[LINKEDIN_LINK]</a></p>
+        <p><strong>Email:</strong> <a class="accentlink" href="mailto:[YOUR_EMAIL]">[YOUR_EMAIL]</a></p>
+        <p><strong>GitHub:</strong> <a class="accentlink" href="[GITHUB_LINK]" target="_blank" rel="noreferrer">[GITHUB_LINK]</a></p>
+        <p><strong>LinkedIn:</strong> <a class="accentlink" href="[LINKEDIN_LINK]" target="_blank" rel="noreferrer">[LINKEDIN_LINK]</a></p>
       </div>
     </section>
 
@@ -409,7 +418,7 @@
       topbar.classList.toggle("scrolled", window.scrollY > 6);
     });
 
-    // Tabs now scroll to sections (clumped)
+    // Tabs scroll
     const tabs = document.querySelectorAll(".tab");
     tabs.forEach(t => t.addEventListener("click", () => {
       tabs.forEach(x => x.classList.remove("is-active"));
@@ -440,7 +449,7 @@
       el.addEventListener("mouseleave", () => { el.style.transform = ""; });
     });
 
-    // Theme toggle (still monotone, slightly lighter)
+    // Theme toggle
     const themeBtn = document.getElementById("themeBtn");
     themeBtn.addEventListener("click", () => {
       document.documentElement.classList.toggle("lightish");
