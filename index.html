@@ -7,6 +7,17 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- PRESS START OVERLAY -->
+  <div class="start-overlay" id="startOverlay">
+    <div class="start-card">
+      <div class="start-title">PRESS START</div>
+      <p class="start-sub">RPG Portfolio Mode</p>
+      <button class="start-btn" id="startBtn">Start</button>
+      <p class="start-hint muted">Tip: scroll to gain XP and unlock achievements.</p>
+    </div>
+  </div>
+
+  <!-- Background -->
   <div class="bg-grid" aria-hidden="true"></div>
   <div class="bg-noise" aria-hidden="true"></div>
 
@@ -36,6 +47,54 @@
   </header>
 
   <main class="wrap">
+    <!-- RPG HUD -->
+    <section class="hudbar reveal" id="hudbar">
+      <div class="playercard tilt">
+        <div class="pc-top">
+          <div>
+            <div class="pc-name">Abdul Masyhur Deo</div>
+            <div class="pc-sub muted">NYP • Diploma in IT (Software Developer track)</div>
+          </div>
+          <span class="rank">LV <span id="level">1</span></span>
+        </div>
+
+        <div class="pc-stats">
+          <div class="statline"><span class="label">Class</span><span class="value">Software Dev</span></div>
+          <div class="statline"><span class="label">Region</span><span class="value">Singapore</span></div>
+          <div class="statline"><span class="label">Current Quest</span><span class="value" id="questText">Explore Projects</span></div>
+        </div>
+
+        <div class="xp">
+          <div class="xp-label">
+            <span>XP</span>
+            <span class="muted"><span id="xpPct">0</span>%</span>
+          </div>
+          <div class="xpbar">
+            <div class="xpfill" id="xpFill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="questlog tilt">
+        <div class="ql-title">Quest Log</div>
+        <ul class="ql-list">
+          <li class="ql-item" data-go="#projects">▶ View Projects</li>
+          <li class="ql-item" data-go="#wdp">▶ Complete WDP Case Study</li>
+          <li class="ql-item" data-go="#contact">▶ Reach Out</li>
+        </ul>
+
+        <div class="achievements">
+          <div class="ach-title">Achievements</div>
+          <div class="ach-grid">
+            <span class="ach locked" id="ach1">First Scroll</span>
+            <span class="ach locked" id="ach2">Project Hunter</span>
+            <span class="ach locked" id="ach3">Case Study Clear</span>
+            <span class="ach locked" id="ach4">Contact Ready</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- HERO -->
     <section class="hero">
       <div class="hero-left">
@@ -103,7 +162,7 @@
       </div>
     </section>
 
-    <!-- CARDS GRID (like example) -->
+    <!-- CARDS GRID -->
     <section id="cards" class="gridWrap reveal">
       <div class="grid">
         <!-- Resume card -->
@@ -138,7 +197,7 @@
             <span class="badge">CSS</span>
             <span class="badge">JavaScript</span>
             <span class="badge">Bootstrap</span>
-            <span class="badge">GitHub</span>
+            <span class="badge">Git/GitHub</span>
           </div>
         </article>
 
@@ -310,6 +369,16 @@
     // Footer year
     document.getElementById("y").textContent = new Date().getFullYear();
 
+    // Press Start overlay
+    const overlay = document.getElementById("startOverlay");
+    const startBtn = document.getElementById("startBtn");
+    if (overlay && startBtn){
+      startBtn.addEventListener("click", () => {
+        overlay.classList.add("hide");
+        setTimeout(() => overlay.remove(), 600);
+      });
+    }
+
     // Scroll reveal
     const revealItems = document.querySelectorAll(".reveal");
     const io = new IntersectionObserver((entries) => {
@@ -342,9 +411,17 @@
         c.style.display = show ? "" : "none";
       });
 
-      // little scroll nudge so it feels responsive
       document.getElementById("cards").scrollIntoView({behavior:"smooth", block:"start"});
     }));
+
+    // Quest log click navigation
+    document.querySelectorAll(".ql-item").forEach(item => {
+      item.addEventListener("click", () => {
+        const target = item.getAttribute("data-go");
+        const el = document.querySelector(target);
+        if (el) el.scrollIntoView({behavior:"smooth", block:"start"});
+      });
+    });
 
     // Hover tilt
     const tilts = document.querySelectorAll(".tilt");
@@ -353,20 +430,71 @@
         const r = el.getBoundingClientRect();
         const x = (e.clientX - r.left) / r.width - 0.5;
         const y = (e.clientY - r.top) / r.height - 0.5;
-        el.style.transform = `translateY(-2px) rotateX(${(-y * 6).toFixed(2)}deg) rotateY(${(x * 6).toFixed(2)}deg)`;
+        el.style.transform = `translateY(-2px) rotateX(${(-y * 6).toFixed(2)}deg) rotateY(${(x * 6).Fixed ? (x*6).Fixed(2) : (x*6).toFixed(2)}deg)`;
       });
       el.addEventListener("mouseleave", () => {
         el.style.transform = "";
       });
     });
 
-    // Theme toggle (still monotone; slightly lighter)
+    // Theme toggle (still monotone, slightly lighter)
     const themeBtn = document.getElementById("themeBtn");
     themeBtn.addEventListener("click", () => {
       document.documentElement.classList.toggle("lightish");
     });
+
+    // XP + Level + Achievements
+    const xpFill = document.getElementById("xpFill");
+    const xpPct = document.getElementById("xpPct");
+    const levelEl = document.getElementById("level");
+    const questText = document.getElementById("questText");
+
+    function unlock(el){
+      if (!el) return;
+      if (el.classList.contains("locked")){
+        el.classList.remove("locked");
+        el.classList.add("unlocked");
+        el.animate([{transform:"scale(1)"},{transform:"scale(1.06)"},{transform:"scale(1)"}],{duration:260});
+      }
+    }
+
+    function updateXP(){
+      const doc = document.documentElement;
+      const scrollTop = doc.scrollTop || document.body.scrollTop;
+      const scrollHeight = doc.scrollHeight - doc.clientHeight;
+      const progress = scrollHeight > 0 ? Math.min(1, Math.max(0, scrollTop / scrollHeight)) : 0;
+      const pct = Math.round(progress * 100);
+
+      if (xpFill) xpFill.style.width = pct + "%";
+      if (xpPct) xpPct.textContent = pct;
+
+      const level = Math.max(1, Math.min(6, Math.floor(pct / 20) + 1));
+      if (levelEl) levelEl.textContent = level;
+
+      const y = window.scrollY;
+      const projects = document.getElementById("projects");
+      const wdp = document.getElementById("wdp");
+      const contact = document.getElementById("contact");
+
+      if (contact && y + 200 >= contact.offsetTop) questText.textContent = "Reach Out";
+      else if (wdp && y + 200 >= wdp.offsetTop) questText.textContent = "Complete WDP Case Study";
+      else if (projects && y + 200 >= projects.offsetTop) questText.textContent = "View Projects";
+      else questText.textContent = "Explore";
+
+      // Achievements
+      const a1 = document.getElementById("ach1");
+      const a2 = document.getElementById("ach2");
+      const a3 = document.getElementById("ach3");
+      const a4 = document.getElementById("ach4");
+
+      if (pct > 3) unlock(a1);
+      if (projects && y + 150 >= projects.offsetTop) unlock(a2);
+      if (wdp && y + 150 >= wdp.offsetTop) unlock(a3);
+      if (contact && y + 150 >= contact.offsetTop) unlock(a4);
+    }
+
+    window.addEventListener("scroll", updateXP, {passive:true});
+    window.addEventListener("load", updateXP);
   </script>
-</body>
-</html>
 </body>
 </html>
