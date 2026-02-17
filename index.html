@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Abdul Masyhur Deo | Software Develop</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Uncial+Antiqua&family=Pacifico&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,7 +12,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- PRESS START OVERLAY -->
   <div class="start-overlay" id="startOverlay">
     <div class="start-card">
       <div class="start-title magic">PRESS START</div>
@@ -23,11 +21,9 @@
     </div>
   </div>
 
-  <!-- Background -->
   <div class="bg-grid" aria-hidden="true"></div>
   <div class="bg-noise" aria-hidden="true"></div>
 
-  <!-- Top bar -->
   <header class="topbar" id="topbar">
     <div class="brand">
       <div class="mark">ND</div>
@@ -45,9 +41,6 @@
 
     <div class="actions">
       <a class="pill accent" href="#contact">Contact</a>
-      <a class="iconbtn" href="[GITHUB_LINK]" target="_blank" rel="noreferrer" aria-label="GitHub">
-        <span class="icon">⌂</span>
-      </a>
       <button class="iconbtn" id="themeBtn" aria-label="Toggle theme">
         <span class="icon">◐</span>
       </button>
@@ -55,7 +48,6 @@
   </header>
 
   <main class="wrap" id="all">
-    <!-- HUD -->
     <section class="hudbar reveal" id="hudbar">
       <div class="playercard tilt">
         <div class="pc-top">
@@ -81,7 +73,6 @@
             <div class="xpfill" id="xpFill"></div>
           </div>
 
-          <!-- Heart palette bar -->
           <div class="hearts" aria-hidden="true">
             <span class="heart h1"></span>
             <span class="heart h2"></span>
@@ -112,7 +103,6 @@
       </div>
     </section>
 
-    <!-- HERO -->
     <section class="hero">
       <div class="hero-left">
         <div class="chipline reveal">
@@ -149,12 +139,11 @@
         </div>
 
         <div class="social reveal">
-          <a class="sbtn" href=www.linkedin.com/in/masyhur-deo-5b10a5367 target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="sbtn" href=masyhurdeo@gmail.com>Email</a>
+          <a class="sbtn" href="https://www.linkedin.com/in/masyhur-deo-5b10a5367" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="sbtn" href="mailto:masyhurdeo@gmail.com">Email</a>
         </div>
       </div>
 
-      <!-- Windows Terminal Panel -->
       <div class="hero-right reveal">
         <div class="winpanel tilt">
           <div class="winbar">
@@ -182,7 +171,6 @@
       </div>
     </section>
 
-    <!-- PROJECTS (varied columns layout) -->
     <section id="projects" class="sectionblock reveal">
       <div class="sectionhead">
         <div>
@@ -193,7 +181,6 @@
       </div>
 
       <div class="twoCol">
-        <!-- Left: Main Quest (bigger) -->
         <div class="colBig">
           <details class="accordion tilt featured" open>
             <summary>
@@ -228,7 +215,6 @@
           </div>
         </div>
 
-        <!-- Right: Side Quests (stacked) -->
         <div class="colSmall">
           <details class="accordion tilt">
             <summary>
@@ -266,7 +252,6 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE (columns) -->
     <section id="experience" class="sectionblock reveal">
       <div class="sectionhead">
         <div>
@@ -344,7 +329,6 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
     <section id="about" class="sectionblock reveal">
       <div class="sectionhead">
         <div>
@@ -407,7 +391,6 @@
       </div>
     </section>
 
-    <!-- WDP CASE STUDY -->
     <section id="wdp" class="case reveal">
       <div class="casehead">
         <h2 class="titlefont">Case Study — WDP Upload & Export</h2>
@@ -446,12 +429,11 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact" class="contact reveal">
       <h2 class="titlefont">Contact</h2>
       <div class="contactbox tilt">
-        <p><strong>Email:</strong> <a class="accentlink" href=masyhurdeo@gmail.com>masyhurdeo@gmail.com</a></p>
-        <p><strong>LinkedIn:</strong> <a class="accentlink" href=www.linkedin.com/in/masyhur-deo-5b10a5367 target="_blank" rel="noreferrer">www.linkedin.com/in/masyhur-deo-5b10a5367</a></p>
+        <p><strong>Email:</strong> <a class="accentlink" href="mailto:masyhurdeo@gmail.com">masyhurdeo@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a class="accentlink" href="https://www.linkedin.com/in/masyhur-deo-5b10a5367" target="_blank" rel="noreferrer">www.linkedin.com/in/masyhur-deo-5b10a5367</a></p>
       </div>
     </section>
 
@@ -463,7 +445,6 @@
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
 
-    // Press Start overlay
     const overlay = document.getElementById("startOverlay");
     const startBtn = document.getElementById("startBtn");
     if (overlay && startBtn){
@@ -473,7 +454,6 @@
       });
     }
 
-    // Scroll reveal
     const revealItems = document.querySelectorAll(".reveal");
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
@@ -485,13 +465,11 @@
     }, { threshold: 0.12 });
     revealItems.forEach(x => io.observe(x));
 
-    // topbar shadow on scroll
     const topbar = document.getElementById("topbar");
     window.addEventListener("scroll", () => {
       topbar.classList.toggle("scrolled", window.scrollY > 6);
     });
 
-    // Tabs scroll
     const tabs = document.querySelectorAll(".tab");
     tabs.forEach(t => t.addEventListener("click", () => {
       tabs.forEach(x => x.classList.remove("is-active"));
@@ -501,7 +479,6 @@
       if (el) el.scrollIntoView({behavior:"smooth", block:"start"});
     }));
 
-    // Quest log click navigation
     document.querySelectorAll(".ql-item").forEach(item => {
       item.addEventListener("click", () => {
         const target = item.getAttribute("data-go");
@@ -510,7 +487,6 @@
       });
     });
 
-    // Hover tilt
     const tilts = document.querySelectorAll(".tilt");
     tilts.forEach(el => {
       el.addEventListener("mousemove", (e) => {
@@ -522,17 +498,18 @@
       el.addEventListener("mouseleave", () => { el.style.transform = ""; });
     });
 
-    // Theme toggle
     const themeBtn = document.getElementById("themeBtn");
     themeBtn.addEventListener("click", () => {
       document.documentElement.classList.toggle("lightish");
     });
 
-    // XP + Level + Achievements
     const xpFill = document.getElementById("xpFill");
     const xpPct = document.getElementById("xpPct");
     const levelEl = document.getElementById("level");
     const questText = document.getElementById("questText");
+
+    let maxPct = 0;
+    let leveledUp = false;
 
     function unlock(el){
       if (!el) return;
@@ -548,13 +525,21 @@
       const scrollTop = doc.scrollTop || document.body.scrollTop;
       const scrollHeight = doc.scrollHeight - doc.clientHeight;
       const progress = scrollHeight > 0 ? Math.min(1, Math.max(0, scrollTop / scrollHeight)) : 0;
-      const pct = Math.round(progress * 100);
+      const pctNow = Math.round(progress * 100);
 
-      if (xpFill) xpFill.style.width = pct + "%";
-      if (xpPct) xpPct.textContent = pct;
+      if (pctNow > maxPct) maxPct = pctNow;
+      if (maxPct > 100) maxPct = 100;
 
-      const level = Math.max(1, Math.min(6, Math.floor(pct / 20) + 1));
-      if (levelEl) levelEl.textContent = level;
+      if (xpFill) xpFill.style.width = maxPct + "%";
+      if (xpPct) xpPct.textContent = maxPct;
+
+      if (maxPct >= 100 && !leveledUp){
+        leveledUp = true;
+        if (levelEl) levelEl.textContent = "2";
+        if (levelEl) levelEl.animate([{transform:"scale(1)"},{transform:"scale(1.15)"},{transform:"scale(1)"}],{duration:320});
+      } else if (!leveledUp){
+        if (levelEl) levelEl.textContent = "1";
+      }
 
       const y = window.scrollY;
       const projects = document.getElementById("projects");
@@ -571,7 +556,7 @@
       const a3 = document.getElementById("ach3");
       const a4 = document.getElementById("ach4");
 
-      if (pct > 3) unlock(a1);
+      if (maxPct > 3) unlock(a1);
       if (projects && y + 150 >= projects.offsetTop) unlock(a2);
       if (wdp && y + 150 >= wdp.offsetTop) unlock(a3);
       if (contact && y + 150 >= contact.offsetTop) unlock(a4);
@@ -580,7 +565,6 @@
     window.addEventListener("scroll", updateXP, {passive:true});
     window.addEventListener("load", updateXP);
 
-    // Accordion icon flip
     document.querySelectorAll("details.accordion").forEach(d => {
       const icon = d.querySelector(".sum-icon");
       const sync = () => icon.textContent = d.open ? "−" : "+";
