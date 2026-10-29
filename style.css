@@ -115,6 +115,7 @@
     .training-list span { display:block; font-size:.71rem; color:var(--accent); margin-bottom:4px; }
     .training-list strong { font-size:.88rem; font-weight:550; }
     .about-layout { display:grid; grid-template-columns:.8fr 1.6fr; gap:70px; }
+    .about-intro { display:flex; flex-direction:column; align-items:flex-start; gap:24px; }
     .about-copy p { color:var(--muted); font-size:1.05rem; }
     .about-copy p+p { margin-top:19px; }
     .about-copy strong { color:var(--text); font-weight:550; }
