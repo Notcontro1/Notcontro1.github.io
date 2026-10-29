@@ -1,0 +1,27 @@
+/* Only moving DOM pieces are promoted. The intact page stays in place underneath. */
+.theme-control .theme-symbol { transform:none; rotate:0deg; }
+.training>.text-link { display:inline-block; margin-top:20px; color:var(--accent); }
+.footer-links { display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+.chaos-stage { z-index:0; pointer-events:auto; touch-action:none; user-select:none; -webkit-user-select:none; }
+.physics-piece { position:absolute; left:0; top:0; transform-origin:center; will-change:transform; cursor:grab; border-radius:12px; }
+.physics-piece>.fall-piece { position:relative; inset:auto; transform-origin:top left; pointer-events:none; max-width:none; }
+.physics-piece .fall-piece,.physics-piece .fall-piece * { animation:none!important; transition:none!important; }
+.physics-piece:hover { outline:2px solid var(--accent); outline-offset:3px; }
+.physics-piece.is-picked-up { outline:2px solid var(--accent); outline-offset:4px; }
+.chaos-stage.is-dragging,.chaos-stage.is-dragging .physics-piece { cursor:grabbing; }
+#chaos-dialog .chaos-recovery { top:20px; width:min(820px,calc(100% - 32px)); display:grid; grid-template-columns:1fr auto; column-gap:24px; row-gap:10px; align-items:center; padding:20px 24px; text-align:left; }
+#chaos-dialog .chaos-recovery h2 { font-size:1.5rem; }
+#chaos-dialog .chaos-recovery p { font-size:.82rem; margin-top:8px; }
+#chaos-dialog .chaos-recovery .chaos-status { color:var(--accent); font-size:.74rem; margin-top:6px; }
+.chaos-actions { display:flex; gap:8px; flex-direction:column; align-items:stretch; }
+#chaos-dialog .chaos-actions .button { min-height:42px; margin:0; padding:9px 14px; font-size:.78rem; gap:13px; }
+#chaos-dialog .chaos-recovery small { grid-column:1/-1; margin:0; padding-top:8px; border-top:1px solid var(--line); font-size:.7rem; }
+@media(max-width:767px) {
+  #chaos-dialog .chaos-recovery { top:12px; width:calc(100% - 24px); grid-template-columns:1fr; padding:17px 18px; gap:12px; }
+  #chaos-dialog .chaos-recovery h2 { font-size:1.35rem; }
+  #chaos-dialog .chaos-recovery p { font-size:.77rem; }
+  .chaos-actions { flex-direction:row; }
+  #chaos-dialog .chaos-actions .button { flex:1; padding-inline:10px; font-size:.7rem; gap:8px; }
+  #chaos-dialog .chaos-recovery small { font-size:.66rem; }
+  .footer-links { gap:12px; }
+}

@@ -13,13 +13,14 @@
     catch { document.documentElement.dataset.theme = 'light'; }
   </script>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="gravity.css">
 </head>
-<body>
+<body data-page="home">
   <a class="skip" href="#main">Skip to content</a>
   <header>
     <div class="wrap header-inner">
-      <a class="brand" href="#home" aria-label="Notcontro1, back to home"><span class="brand-mark" aria-hidden="true">N</span>Notcontro1<span class="sr-only">, Masyhur Deo</span></a>
-      <nav id="navigation" aria-label="Main navigation"><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+      <a class="brand" href="profile.html" aria-label="Notcontro1 profile"><span class="brand-mark" aria-hidden="true">N</span>Notcontro1<span class="sr-only">, Masyhur Deo</span></a>
+      <nav id="navigation" aria-label="Main navigation"><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#about">About</a><a href="certificates.html">Certificates</a><a href="#contact">Contact</a></nav>
       <button class="icon-button theme-control" id="theme-toggle" type="button" aria-label="Switch colour theme" title="Switch colour theme"><span class="theme-symbol" aria-hidden="true"></span><span class="theme-label" aria-hidden="true">Dark mode</span></button>
       <button class="icon-button menu-button" id="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
     </div>
@@ -60,9 +61,9 @@
       <div class="skills-layout"><div class="skills-intro reveal"><h2 id="skills-title" data-typewriter>My development loadout.</h2><p>The languages, frameworks and tools I’ve worked with across my projects.</p><div class="skills-note">Growing through practice, <span class="draw-underline">one project at a time.</span></div></div><div class="skills-groups"><div class="skill-group reveal"><h3>Languages</h3><p>JavaScript, Python, SQL,<br>HTML &amp; CSS</p></div><div class="skill-group reveal"><h3>Applications</h3><p>React, Node.js, Express,<br>Flask &amp; Vite</p></div><div class="skill-group reveal"><h3>Data &amp; databases</h3><p>MySQL, SQLite, Sequelize,<br>pandas, NumPy &amp; scikit-learn</p></div><div class="skill-group reveal"><h3>Workflow &amp; foundations</h3><p>Git, GitHub, debugging,<br>Cloud &amp; UX fundamentals</p></div></div></div>
     </section>
     <section class="wrap content-section" id="experience" data-explore aria-labelledby="experience-title">
-      <div class="experience-layout"><div class="reveal"><span class="section-object" aria-hidden="true">++</span><h2 id="experience-title">Learning by doing.</h2><div class="timeline"><article class="timeline-item"><time>2025 to 2028</time><h3>Nanyang Polytechnic</h3><p>Diploma in Information Technology, specialising in Cloud. Building practical experience through team projects and hackathons.</p></article><article class="timeline-item"><time>2024 to present</time><h3>McDonald’s</h3><p>Part-time crew. Bringing real-world work experience alongside my studies.</p></article></div></div><aside class="training reveal" aria-labelledby="training-title"><h3 id="training-title">Certificates &amp; training</h3><ul class="training-list"><li><span>IBM</span><strong>User Experience Design Fundamentals</strong></li><li><span>IBM</span><strong>Web Development Fundamentals</strong></li><li><span>AWS Academy</span><strong>Cloud Foundations</strong></li><li><span>AWS Academy</span><strong>Generative AI Foundations</strong></li></ul></aside></div>
+      <div class="experience-layout"><div class="reveal"><span class="section-object" aria-hidden="true">++</span><h2 id="experience-title">Learning by doing.</h2><div class="timeline"><article class="timeline-item"><time>2025 to 2028</time><h3>Nanyang Polytechnic</h3><p>Diploma in Information Technology, specialising in Cloud. Building practical experience through team projects and hackathons.</p></article><article class="timeline-item"><time>2024 to present</time><h3>McDonald’s</h3><p>Part-time crew. Bringing real-world work experience alongside my studies.</p></article></div></div><aside class="training reveal" aria-labelledby="training-title"><h3 id="training-title">Certificates &amp; training</h3><ul class="training-list"><li><span>IBM</span><strong>User Experience Design Fundamentals</strong></li><li><span>IBM</span><strong>Web Development Fundamentals</strong></li><li><span>AWS Academy</span><strong>Cloud Foundations</strong></li><li><span>AWS Academy</span><strong>Generative AI Foundations</strong></li></ul><a class="text-link" href="certificates.html">All certificates <span aria-hidden="true">↗</span></a></aside></div>
     </section>
-    <section class="wrap content-section" id="about" aria-labelledby="about-title"><div class="about-layout"><h2 class="reveal" id="about-title" data-typewriter>Hi, I’m Masyhur.</h2><div class="about-copy reveal"><p>My full name is <strong>Abdul Masyhur Deo</strong>. I’m an Information Technology student at Nanyang Polytechnic, specialising in Cloud.</p><p>I enjoy the <mark class="scroll-highlight">practical side</mark> of development: working through bugs, connecting parts of an application and making information easier to understand.</p><p>My projects span shipment visibility, assignment planning, inventory forecasting and cyberbullying awareness. I’m looking for a <strong><mark class="scroll-highlight">Cloud or IT internship</mark></strong> where I can keep learning and contribute to real projects.</p></div></div></section>
+    <section class="wrap content-section" id="about" aria-labelledby="about-title"><div class="about-layout"><h2 class="reveal" id="about-title" data-typewriter>Hi, I’m Masyhur.</h2><div class="about-copy reveal"><p>My full name is <strong>Abdul Masyhur Deo</strong>. I’m an Information Technology student at Nanyang Polytechnic, specialising in Cloud.</p><p>I enjoy the <mark class="scroll-highlight">practical side</mark> of development: working through bugs, connecting parts of an application and making information easier to understand.</p><p>My projects span shipment visibility, assignment planning, inventory forecasting and cyberbullying awareness. I’m looking for a <strong><mark class="scroll-highlight">Cloud or IT internship</mark></strong> where I can keep learning and contribute to real projects.</p><p><a class="text-link" href="profile.html">View profile <span aria-hidden="true">↗</span></a></p></div></div></section>
     <section class="wrap contact" id="contact" data-explore aria-labelledby="contact-title"><h2 class="reveal" id="contact-title">A new project.<br><span>A next chapter.</span></h2><p class="reveal">Have an internship opportunity or want to discuss my work? I’d be glad to connect.</p><div class="contact-actions reveal"><a class="button primary" href="mailto:masyhurdeo@gmail.com">Email me <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/masyhurdeo" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a><a class="text-link" href="https://www.linkedin.com/in/masyhur-deo-5b10a5367" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a><button class="text-link" type="button" id="copy-email">Copy email</button></div><a class="contact-email" href="mailto:masyhurdeo@gmail.com">masyhurdeo@gmail.com</a></section>
     <section class="wrap mischief" aria-labelledby="mischief-title">
       <div class="mischief-inner reveal">
@@ -81,18 +82,15 @@
     </section>
 
   </main>
-  <footer class="wrap"><span>© <span id="year">2026</span> Abdul Masyhur Deo</span><a href="#home">Back to top ↑</a></footer>
+  <footer class="wrap"><span>© <span id="year">2026</span> Abdul Masyhur Deo</span><div class="footer-links"><a href="profile.html">Profile</a><a href="certificates.html">Certificates</a><a href="#home">Back to top ↑</a></div></footer>
   <dialog id="project-dialog" aria-labelledby="dialog-title"><div class="dialog-bar"><span id="dialog-context">Project details</span><button class="icon-button" type="button" data-close aria-label="Close project details">×</button></div><div class="dialog-body" id="project-body"></div></dialog>
   <dialog id="resume-dialog" aria-labelledby="resume-title"><div class="dialog-bar"><span>Resume overview</span><button class="icon-button" type="button" data-close aria-label="Close resume">×</button></div><div class="dialog-body"><h2 id="resume-title">Abdul Masyhur Deo</h2><p>Information Technology / Cloud</p><h3>Profile</h3><p>Nanyang Polytechnic IT diploma student specialising in Cloud, with full-stack web project experience using React, Node.js, Express and MySQL. Seeking a Cloud or IT internship.</p><h3>Education &amp; experience</h3><ul><li>Nanyang Polytechnic: Diploma in Information Technology, 2025 to 2028.</li><li>McDonald’s: Part-time crew, 2024 to present.</li></ul><h3>Selected work</h3><p>Aeris Transport Visibility &amp; ePOD, Assignment Deadline Tracker, Inventory Forecasting &amp; Reorder Prototype, and Project Heartcode.</p><div class="dialog-actions"><button class="button primary" type="button" id="print-resume">Print / save PDF <span aria-hidden="true">↗</span></button><a class="button" href="mailto:masyhurdeo@gmail.com">Email me</a></div><p class="source-note">Use your browser’s print dialog to save a clean, text-based resume as PDF.</p></div></dialog>
   <dialog id="chaos-dialog" aria-labelledby="chaos-title" aria-describedby="chaos-description">
-    <div class="chaos-stage" id="chaos-stage" aria-hidden="true" inert></div>
+    <div class="chaos-stage" id="chaos-stage" aria-hidden="true"></div>
     <div class="chaos-recovery">
-      <span class="chaos-symbol" aria-hidden="true">{ ... }</span>
-      <h2 id="chaos-title">You pressed it.</h2>
-      <p id="chaos-description">The portfolio has temporarily misplaced its gravity.</p>
-      <p class="chaos-status" id="chaos-status" role="status" aria-live="polite">A little reconstruction should do it.</p>
-      <button class="button primary" type="button" id="rebuild-site">Put it back together <span aria-hidden="true">↗</span></button>
-      <small>Escape works too. Your progress is kept.</small>
+      <div><h2 id="chaos-title">You pressed it.</h2><p id="chaos-description">Pick up a piece, move it around, and let go.</p><p class="chaos-status" id="chaos-status" role="status" aria-live="polite">Gravity is ready when you are.</p></div>
+      <div class="chaos-actions"><button class="button" type="button" id="nudge-pieces">Nudge pieces</button><button class="button primary" type="button" id="rebuild-site">Put it back together <span aria-hidden="true">↗</span></button></div>
+      <small>Mouse and touch both work. Escape puts the page back together.</small>
     </div>
   </dialog>
 
@@ -111,387 +109,11 @@
     <h2>CERTIFICATES &amp; TRAINING</h2><p>IBM User Experience Design Fundamentals; IBM Web Development Fundamentals; AWS Academy Cloud Foundations; AWS Academy Generative AI Foundations.</p>
   </article>
   <noscript><p class="wrap" style="padding-block:20px">Projects, skills and contact details are available above. Enable JavaScript for project details, filters and exploration badges.</p></noscript>
-  <script>
-    /* EDIT HERE: project copy and verified links. Empty URLs produce a source
-       availability note. This file contains all CSS and JavaScript; no setup needed. */
-    const PROJECTS = {
-      aeris: {
-        title: 'Aeris Transport Visibility & ePOD', context: '2026 / Year 2 Semester 1 team project',
-        intro: 'A team-built module for following shipments from dispatch until receipt by freight forwarders or airport staff.',
-        contributions: ['Helped develop shipment visibility and electronic proof of delivery.', 'Worked on shipment dashboards, alerts and proof of delivery screens, focusing on clear statuses and consistent interfaces.', 'Collaborated using GitHub and resolved integration, styling and build issues.'],
-        stack: ['React', 'Vite', 'Node.js', 'Express', 'MySQL', 'Sequelize'],
-        repo: '', demo: '', note: 'The repository is private. Project code and a walkthrough can be discussed on request.'
-      },
-      tracker: {
-        title: 'Assignment Deadline Tracker', context: '2026 / AWS x NYP Hackathon',
-        intro: 'An assignment planning system to help students organise work by deadline and workload.',
-        contributions: ['Contributed to the development of the assignment planning system.', 'Worked on deadline-conflict scoring to support prioritisation.', 'Added a “Why this priority?” breakdown to make task recommendations easier to understand.'],
-        stack: ['React', 'JavaScript'], repo: '', demo: '', note: 'A public demo or repository link has not been added. Contact me to discuss the project.'
-      },
-      inventory: {
-        title: 'Inventory Forecasting & Reorder Prototype', context: '2025 / Year 1 Semester 2 team project',
-        intro: 'A prototype that processes Excel sales data and uses linear regression to forecast product-level demand.',
-        contributions: ['Worked on the Excel sales data processing and forecasting prototype.', 'Used Python data libraries and linear regression for product-level forecasts.', 'Included product and status filters, alert levels and CSV reorder lists.'],
-        stack: ['Python', 'Flask', 'pandas', 'NumPy', 'scikit-learn'], repo: '', demo: '', note: 'A public demo or repository link has not been added. Contact me to discuss the prototype.'
-      },
-      heartcode: {
-        title: 'Project Heartcode', context: '2023 / SMU & CDAC web development programme',
-        intro: 'A cyberbullying awareness website created through a web development programme organised by SMU and CDAC.',
-        contributions: ['Created a cyberbullying awareness website using HTML, CSS and JavaScript.', 'Built early experience in structuring and presenting information for the web.'],
-        stack: ['HTML', 'CSS', 'JavaScript'], repo: '', demo: 'https://ttinten.github.io/Project-Heartcode/index.html', note: 'An early web development project from 2023.'
-      }
-    };
-    const $ = (selector, root = document) => root.querySelector(selector);
-    const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
-    const storage = {
-      get(key) { try { return localStorage.getItem(key); } catch { return null; } },
-      set(key, value) { try { localStorage.setItem(key, value); } catch { /* Session still works. */ } }
-    };
-    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-    let toastTimer;
-    function notify(message) {
-      const toast = $('#toast'); clearTimeout(toastTimer);
-      toast.textContent = message; toast.classList.add('show');
-      toastTimer = setTimeout(() => toast.classList.remove('show'), 3600);
-    }
-    // Light is the default. Only an explicit switch is remembered.
-    const themeToggle = $('#theme-toggle');
-    function updateThemeLabel() {
-      const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-      themeToggle.setAttribute('aria-label', `Switch to ${next} mode`); themeToggle.title = `Switch to ${next} mode`;
-      $('.theme-label').textContent = next === 'dark' ? 'Dark mode' : 'Light mode';
-      themeToggle.setAttribute('aria-pressed', String(next === 'light'));
-      $('meta[name="theme-color"]').content = document.documentElement.dataset.theme === 'dark' ? '#191719' : '#f7f9fe';
-    }
-    themeToggle.addEventListener('click', () => {
-      const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-      document.documentElement.dataset.theme = next; storage.set('md-theme-v2', next); updateThemeLabel();
-      if (!reducedMotion.matches) { document.documentElement.classList.remove('theme-changing'); void document.body.offsetWidth; document.documentElement.classList.add('theme-changing'); setTimeout(() => document.documentElement.classList.remove('theme-changing'), 350); }
-      if (!reducedMotion.matches) $('.theme-symbol').animate([{ transform:'rotate(-160deg) scale(.7)' }, { transform:'rotate(0deg) scale(1)' }], { duration:450, easing:'cubic-bezier(.2,.8,.2,1)' });
-    });
-    updateThemeLabel();
-    const menu = $('#menu-toggle'), navigation = $('#navigation');
-    function closeMenu() { navigation.classList.remove('is-open'); menu.setAttribute('aria-expanded', 'false'); menu.textContent = 'Menu'; }
-    menu.addEventListener('click', () => {
-      const open = menu.getAttribute('aria-expanded') !== 'true';
-      navigation.classList.toggle('is-open', open); menu.setAttribute('aria-expanded', String(open)); menu.textContent = open ? 'Close' : 'Menu';
-    });
-    $$('#navigation a').forEach(link => link.addEventListener('click', closeMenu));
-    $('.brand').addEventListener('click', closeMenu);
-    document.addEventListener('keydown', event => { if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') { closeMenu(); menu.focus(); } });
-    document.addEventListener('click', event => { if (!event.target.closest('header')) closeMenu(); });
-    matchMedia('(min-width: 768px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
-    // A transform-only shared indicator follows the selected filter.
-    let indicatorMotion;
-    function moveFilterIndicator(animate = true) {
-      const bar = $('.filter-bar'), active = $('.filter-button[aria-pressed="true"]');
-      if (!bar || !active) return;
-      const indicator = $('.filter-indicator'), target = { x:active.offsetLeft, y:active.offsetTop, w:active.offsetWidth, h:active.offsetHeight };
-      const old = indicator.getBoundingClientRect(), parent = bar.getBoundingClientRect();
-      indicatorMotion?.cancel();
-      indicator.style.width = target.w + 'px'; indicator.style.height = target.h + 'px';
-      indicator.style.transform = `translate(${target.x}px,${target.y}px)`;
-      if (animate && !reducedMotion.matches && old.width > 1) {
-        indicatorMotion = indicator.animate([
-          { transform:`translate(${old.left-parent.left-bar.clientLeft}px,${old.top-parent.top-bar.clientTop}px) scale(${old.width/target.w},${old.height/target.h})` },
-          { transform:`translate(${target.x}px,${target.y}px) scale(1,1)` }
-        ], {duration:340,easing:'cubic-bezier(.2,.8,.2,1)'});
-      }
-    }
-    moveFilterIndicator(false);
-    if ('ResizeObserver' in window) new ResizeObserver(() => moveFilterIndicator(false)).observe($('.filter-bar'));
-    // Filter buttons update one shared grid and announce the number of results.
-    $$('.filter-button').forEach(button => button.addEventListener('click', () => {
-      const filter = button.dataset.filter;
-      $$('.filter-button').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-      moveFilterIndicator();
-      let count = 0;
-      $$('.project').forEach(project => {
-        const visible = filter === 'all' || project.dataset.category === filter;
-        project.hidden = !visible; project.classList.remove('filter-enter');
-        if (visible) { project.style.setProperty('--filter-order', count++); project.classList.add('is-visible'); if (!reducedMotion.matches) { void project.offsetWidth; project.classList.add('filter-enter'); } }
-      });
-      $('#filter-status').textContent = `${count} ${count === 1 ? 'project' : 'projects'} shown.`;
-    }));
-    // Native dialogs supply focus trapping, Escape dismissal and focus restoration.
-    function openDialog(dialog) { closeMenu(); dialog.showModal(); document.body.style.overflow = 'hidden'; }
-    $$('dialog:not(#chaos-dialog)').forEach(dialog => {
-      $('[data-close]', dialog).addEventListener('click', () => dialog.close());
-      dialog.addEventListener('close', () => { document.body.style.overflow = ''; });
-      dialog.addEventListener('click', event => {
-        const box = dialog.getBoundingClientRect();
-        if (event.target === dialog && (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom)) dialog.close();
-      });
-    });
-    // textContent keeps edits to project descriptions from injecting HTML.
-    function element(tag, text, className) { const node = document.createElement(tag); if (text) node.textContent = text; if (className) node.className = className; return node; }
-    $$('[data-project]').forEach(button => button.addEventListener('click', () => {
-      const project = PROJECTS[button.dataset.project]; if (!project) return;
-      $('#dialog-context').textContent = project.context;
-      const body = $('#project-body'); body.replaceChildren();
-      const title = element('h2', project.title); title.id = 'dialog-title';
-      body.append(title, element('p', project.intro), element('h3', 'My contribution'));
-      const list = element('ul'); project.contributions.forEach(text => list.append(element('li', text))); body.append(list, element('h3', 'Built with'));
-      const tags = element('ul', null, 'tags'); tags.setAttribute('aria-label', 'Technologies'); project.stack.forEach(text => tags.append(element('li', text))); body.append(tags);
-      const actions = element('div', null, 'dialog-actions');
-      [['repo', 'Source code'], ['demo', 'Live website']].forEach(([key, label]) => {
-        if (!project[key]) return;
-        try { const url = new URL(project[key]); if (url.protocol !== 'https:') return; const link = element('a', label + ' ↗', 'button'); link.href = url.href; link.target = '_blank'; link.rel = 'noopener noreferrer'; link.setAttribute('aria-label', label + ' (opens in a new tab)'); actions.append(link); }
-        catch { /* Omit invalid edited links. */ }
-      });
-      if (!project.repo && !project.demo) { const link = element('a', 'Email me', 'button primary'); link.href = 'mailto:masyhurdeo@gmail.com'; actions.append(link); }
-      body.append(element('p', project.note, 'source-note'), actions); openDialog($('#project-dialog'));
-    }));
-    $('#resume-open').addEventListener('click', () => openDialog($('#resume-dialog')));
-    $('#print-resume').addEventListener('click', () => { $('#resume-dialog').close(); window.print(); });
-    $('#copy-email').addEventListener('click', async () => {
-      try { if (!navigator.clipboard) throw new Error('Clipboard unavailable'); await navigator.clipboard.writeText('masyhurdeo@gmail.com'); notify('Email copied. Thanks for stopping by.'); }
-      catch { const range = document.createRange(); range.selectNodeContents($('.contact-email')); const selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(range); notify('Email selected. Press Ctrl+C or use your device’s Copy command.'); }
-    });
-    // Exploration belongs to the visitor. It never measures professional proficiency.
-    const stopIds = ['projects', 'skills', 'experience', 'contact'];
-    let visited;
-    try { const saved = JSON.parse(storage.get('md-explored') || '[]'); visited = new Set(Array.isArray(saved) ? saved.filter(id => stopIds.includes(id)) : []); }
-    catch { visited = new Set(); }
-    const stopLabels = { projects: 'Project explorer', skills: 'Loadout inspected', experience: 'Journey discovered', contact: 'Connection ready' };
-    function renderProgress() {
-      $('.route').classList.toggle('is-complete', visited.size === 4);
-      $('#route-count').textContent = `${visited.size} / 4 explored`;
-      $('#route-message').textContent = visited.size === 4 ? 'Portfolio explored. Thanks for visiting.' : 'A little curiosity goes a long way.';
-      $$('.map-stop').forEach(stop => { const done = visited.has(stop.dataset.stop); stop.classList.toggle('visited', done); stop.setAttribute('aria-label', stop.dataset.stop[0].toUpperCase() + stop.dataset.stop.slice(1) + (done ? ', explored' : '')); });
-    }
-    function markExplored(id) { if (visited.has(id)) return; visited.add(id); storage.set('md-explored', JSON.stringify([...visited])); renderProgress(); notify(visited.size === 4 ? 'All four stops explored. Nice to meet you.' : `${stopLabels[id]} · ${visited.size} of 4 stops`); }
-    $('#reset-progress').addEventListener('click', () => { visited.clear(); storage.set('md-explored', '[]'); renderProgress(); notify('Exploration reset. Take another look around.'); });
-    renderProgress();
-    // Short tactile ripples acknowledge a click without introducing constant motion.
-    $$('.button.primary').forEach(button => button.addEventListener('click', event => {
-      if (reducedMotion.matches) return;
-      const bounds = button.getBoundingClientRect(), wave = element('span', null, 'click-wave');
-      wave.setAttribute('aria-hidden','true');
-      wave.style.left = (event.detail ? event.clientX - bounds.left : bounds.width / 2) + 'px';
-      wave.style.top = (event.detail ? event.clientY - bounds.top : bounds.height / 2) + 'px';
-      button.append(wave);
-      const motion = wave.animate([{ transform:'scale(.2)', opacity:.24 }, { transform:'scale(12)', opacity:0 }], { duration:550, easing:'cubic-bezier(.2,.8,.2,1)' });
-      motion.finished.then(() => wave.remove(), () => wave.remove());
-    }));
-    $$('.map-stop').forEach(stop => stop.addEventListener('click', () => {
-      if (!reducedMotion.matches) $('.stop-icon', stop).animate([{ transform:'scale(1)' }, { transform:'scale(.88) rotate(-8deg)', offset:.35 }, { transform:'scale(1.12) rotate(3deg)', offset:.7 }, { transform:'scale(1)' }], { duration:420, easing:'cubic-bezier(.2,.8,.2,1)' });
-    }));
-    $$('.project').forEach((card,index) => {
-      card.style.setProperty('--reveal-order', index % 2);
-      card.addEventListener('animationend', event => { if (event.target === card && event.animationName === 'filter-slide') card.classList.remove('filter-enter'); });
-    });
-    if ('IntersectionObserver' in window) {
-      // Headings must stay visible for 700ms, avoiding badges during quick scrolling.
-      const dwellTimers = new Map();
-      const explorationObserver = new IntersectionObserver(entries => entries.forEach(entry => {
-        const id = entry.target.closest('[data-explore]').id;
-        if (entry.isIntersecting && !visited.has(id) && !dwellTimers.has(id)) dwellTimers.set(id, setTimeout(() => { markExplored(id); dwellTimers.delete(id); }, 700));
-        else if (!entry.isIntersecting) { clearTimeout(dwellTimers.get(id)); dwellTimers.delete(id); }
-      }), { rootMargin: '-76px 0px -10% 0px', threshold: 1 });
-      $$('[data-explore]').forEach(section => explorationObserver.observe($('h2', section)));
-      const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); revealObserver.unobserve(entry.target); } }), { threshold: .08 });
-      $$('.reveal').forEach(node => { node.classList.add('will-reveal'); revealObserver.observe(node); });
-      const navObserver = new IntersectionObserver(entries => entries.forEach(entry => {
-        if (entry.isIntersecting) $$('#navigation a').forEach(link => { if (link.hash === '#' + entry.target.id) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current'); });
-      }), { rootMargin: '-12% 0px -60% 0px', threshold: 0 });
-      $$('main section[id]').forEach(section => navObserver.observe(section));
-    } else { $$('.map-stop').forEach(stop => stop.addEventListener('click', () => markExplored(stop.dataset.stop))); }
-    $('#year').textContent = new Date().getFullYear();
-  </script>
-  <script>
-(() => {
-  'use strict';
-  const one = (selector, root = document) => root.querySelector(selector);
-  const all = (selector, root = document) => [...root.querySelectorAll(selector)];
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
-  const activeTyping = new Set();
-  const chargeControls = [];
-
-  // A card charges as feedback only. Its links always work immediately.
-  all('.project').forEach(card => {
-    const track = document.createElement('span'); track.className = 'charge-track'; track.setAttribute('aria-hidden','true');
-    const fill = document.createElement('span'); fill.className = 'charge-fill'; track.append(fill);
-    const readout = document.createElement('span'); readout.className = 'charge-readout'; readout.setAttribute('aria-hidden','true'); readout.textContent = 'Charging · 0%';
-    card.append(track, readout);
-    let frame = 0, hovering = false, started = false;
-    function stop() {
-      cancelAnimationFrame(frame); frame = 0; started = false;
-      card.classList.remove('is-charging','is-charged'); card.style.setProperty('--charge', '0'); readout.textContent = 'Charging · 0%';
-    }
-    function start() {
-      if (started) return;
-      started = true; const began = performance.now(); card.classList.add('is-charging');
-      function tick(now) {
-        const progress = reduce.matches ? 1 : Math.min(1, (now - began) / 1050);
-        card.style.setProperty('--charge', String(progress));
-        readout.textContent = progress === 1 ? 'Charged. Explore away.' : `Charging · ${Math.round(progress * 100)}%`;
-        if (progress < 1) frame = requestAnimationFrame(tick);
-        else { card.classList.remove('is-charging'); card.classList.add('is-charged'); frame = 0; }
-      }
-      frame = requestAnimationFrame(tick);
-    }
-    card.addEventListener('pointerenter', event => { if (event.pointerType !== 'touch') { hovering = true; start(); } });
-    card.addEventListener('pointerleave', () => { hovering = false; if (!card.contains(document.activeElement)) stop(); });
-    card.addEventListener('focusin', start);
-    card.addEventListener('focusout', () => { queueMicrotask(() => { if (!hovering && !card.contains(document.activeElement)) stop(); }); });
-    chargeControls.push({ stop, start, card });
-  });
-
-  // Keep the full text in the accessibility tree and reserve its final geometry.
-  const typingTargets = all('[data-typewriter]');
-  typingTargets.forEach(target => {
-    const text = target.textContent;
-    const line = document.createElement('span'); line.className = 'type-line';
-    const accessible = document.createElement('span'); accessible.className = 'sr-only'; accessible.textContent = text;
-    const layout = document.createElement('span'); layout.className = 'type-layout'; layout.setAttribute('aria-hidden','true'); layout.textContent = text;
-    const ink = document.createElement('span'); ink.className = 'type-ink'; ink.setAttribute('aria-hidden','true'); ink.textContent = text;
-    line.append(accessible,layout,ink); target.replaceChildren(line);
-    let timer = 0, done = false; target.dataset.typingState = 'pending';
-    function finish() { clearTimeout(timer); ink.textContent = text; target.classList.remove('is-typing'); target.dataset.typingState = 'complete'; activeTyping.delete(finish); }
-    function type() {
-      if (done) return; done = true;
-      if (reduce.matches) { finish(); return; }
-      let index = 0; const characters = Array.from(text); ink.textContent = ''; target.classList.add('is-typing'); target.dataset.typingState = 'typing'; activeTyping.add(finish);
-      function next() {
-        index = Math.min(index + 1, characters.length); ink.textContent = characters.slice(0,index).join('');
-        if (index < characters.length) timer = setTimeout(next, /[,.]/.test(characters[index-1]) ? 100 : 32);
-        else finish();
-      }
-      next();
-    }
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver(entries => { if (entries.some(entry => entry.isIntersecting)) { type(); observer.disconnect(); } }, { threshold:.45, rootMargin:'-90px 0px -8% 0px' });
-      observer.observe(target);
-    }
-  });
-
-  const marks = all('.scroll-highlight,.draw-underline');
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-marked'); observer.unobserve(entry.target); } }), { threshold:.5, rootMargin:'0px 0px -8% 0px' });
-    marks.forEach(mark => observer.observe(mark));
-  } else marks.forEach(mark => mark.classList.add('is-marked'));
-
-  // Small physical toys work with click, touch, Enter and Space.
-  const toyMotions = new Map();
-  all('[data-toy]').forEach((toy,index) => toy.addEventListener('click', () => {
-    toyMotions.get(toy)?.cancel();
-    if (reduce.matches) { toy.style.background = 'var(--tint)'; return; }
-    const rotation = [0,8,-7][index];
-    const motion = toy.animate([
-      { transform:`translateY(0) rotate(${rotation}deg) scale(1)` },
-      { transform:`translateY(-24px) rotate(${rotation+200}deg) scale(1.13)`, offset:.5 },
-      { transform:`translateY(0) rotate(${rotation+360}deg) scale(1)` }
-    ], {duration:650,easing:'cubic-bezier(.2,.8,.2,1)'});
-    toyMotions.set(toy,motion); motion.finished.then(() => toyMotions.delete(toy),() => {});
-  }));
-
-  const danger = one('#do-not-press'), dialog = one('#chaos-dialog'), stage = one('#chaos-stage'), rebuildButton = one('#rebuild-site'), status = one('#chaos-status');
-  let active = false, rebuilding = false, pieces = [], motions = [], savedOverflow = '', savedScroll = {x:0,y:0}, assembly = 0;
-  const random = (min,max) => min + Math.random() * (max - min);
-  const pose = (x,y,angle,scale) => `translate3d(${x}px,${y}px,0) rotate(${angle}deg) scale(${scale})`;
-
-  function cleanClone(source) {
-    const clone = source.cloneNode(true); clone.removeAttribute('id'); clone.removeAttribute('hidden');
-    all('[id]',clone).forEach(node => node.removeAttribute('id'));
-    all('.will-reveal,.reveal',clone).forEach(node => node.classList.remove('will-reveal','reveal'));
-    clone.classList.remove('will-reveal','reveal','filter-enter','is-typing','is-charging','is-charged');
-    clone.classList.add('fall-piece'); clone.setAttribute('aria-hidden','true'); clone.inert = true;
-    return clone;
-  }
-
-  function restore() {
-    if (!active) return;
-    active = false; rebuilding = false; assembly++;
-    motions.forEach(motion => motion.cancel()); motions = []; stage.replaceChildren(); pieces = [];
-    document.body.classList.remove('site-fallen'); document.body.style.overflow = savedOverflow;
-    if (dialog.open) dialog.close();
-    danger.textContent = 'Definitely do not press';
-    danger.focus({preventScroll:true});
-    // No page dimensions were changed, so the original scroll position remains.
-    if (Math.abs(scrollY - savedScroll.y) > 2) window.scrollTo({left:savedScroll.x,top:savedScroll.y,behavior:'instant'});
-    if (typeof notify === 'function') notify('Portfolio rebuilt. Curiosity badge unlocked.');
-  }
-
-  async function rebuild() {
-    if (!active || rebuilding) return;
-    rebuilding = true; status.textContent = 'Putting everything back in its place…';
-    rebuildButton.disabled = true;
-    if (reduce.matches) { restore(); return; }
-    motions.forEach(motion => motion.pause());
-    const returns = pieces.map(({node,origin},index) => {
-      const current = getComputedStyle(node).transform;
-      const motion = node.animate([
-        {transform:current,opacity:1},
-        {transform:origin,opacity:0}
-      ],{duration:460,delay:(index%5)*25,easing:'cubic-bezier(.2,.8,.2,1)',fill:'forwards'});
-      motions.push(motion); return motion.finished;
-    });
-    await Promise.allSettled(returns); restore();
-  }
-
-  function collapse() {
-    if (active) return;
-    // Capture real components once, before hiding the intact page. No screenshots,
-    // network calls, content deletion, or reparenting of the working components.
-    const selectors = '.hero-copy,.route,.project:not([hidden]),.skills-intro,.skill-group,.timeline-item,.training,.about-copy,.contact h2,.contact-actions,.toy';
-    const sources = all(selectors).filter(node => node.getBoundingClientRect().width > 0).slice(0, innerWidth < 600 ? 18 : 24);
-    const snapshots = sources.map(source => ({source,rect:source.getBoundingClientRect()}));
-    savedOverflow = document.body.style.overflow; savedScroll = {x:scrollX,y:scrollY};
-    active = true; rebuilding = false; const run = ++assembly;
-    status.textContent = reduce.matches ? 'Curiosity badge unlocked. Ready when you are.' : 'There goes the layout…';
-    rebuildButton.disabled = false; stage.replaceChildren(); pieces = []; motions = [];
-    dialog.showModal(); document.body.style.overflow = 'hidden'; document.body.classList.add('site-fallen');
-    const width = innerWidth, height = innerHeight;
-    snapshots.forEach(({source,rect},index) => {
-      const node = cleanClone(source);
-      const nodeWidth = Math.min(rect.width,650); node.style.width = nodeWidth+'px'; node.style.left = '0'; node.style.top = '0';
-      stage.append(node);
-      const nodeHeight = node.offsetHeight;
-      const scale = Math.min(width < 600 ? .52 : .67, (width*.62)/nodeWidth, 260/Math.max(nodeHeight,1));
-      const scaledWidth = nodeWidth*scale, scaledHeight = nodeHeight*scale;
-      const visible = rect.bottom > 76 && rect.top < height;
-      const startX = visible ? rect.left : random(-20,Math.max(0,width-scaledWidth));
-      const startY = visible ? rect.top : -Math.max(nodeHeight,180) - random(0,160);
-      const startScale = visible ? 1 : scale;
-      // Transform origin is center, so compensate to place the scaled piece on the floor.
-      const targetX = random(-10,Math.max(0,width-scaledWidth)) - (nodeWidth-scaledWidth)/2;
-      const targetY = height - scaledHeight - 18 - (index%4)*18 - (nodeHeight-scaledHeight)/2;
-      const angle = random(-22,22), origin = pose(startX,startY,0,startScale);
-      const landed = pose(targetX,targetY,angle,scale);
-      node.style.transform = origin;
-      pieces.push({node,origin});
-      if (reduce.matches) { node.style.transform = landed; return; }
-      const motion = node.animate([
-        {transform:origin,opacity:1,offset:0,easing:'cubic-bezier(.55,.05,.85,.5)'},
-        {transform:landed,opacity:1,offset:.68,easing:'cubic-bezier(.1,.6,.3,1)'},
-        {transform:pose(targetX+8,targetY-random(26,58),angle+7,scale),opacity:1,offset:.83,easing:'cubic-bezier(.55,.05,.85,.5)'},
-        {transform:pose(targetX+13,targetY+3,angle-2,scale),opacity:1,offset:1}
-      ],{duration:1450+(index%3)*110,delay:index*42,fill:'forwards'});
-      motions.push(motion);
-    });
-    if (!reduce.matches) {
-      const panel = one('.chaos-recovery',dialog);
-      const pop = panel.animate([{opacity:0,transform:'translate(-50%,14px) scale(.96)'},{opacity:1,transform:'translate(-50%,0) scale(1)'}],{duration:400,delay:400,fill:'both',easing:'cubic-bezier(.2,.8,.2,1)'});
-      motions.push(pop);
-      const falling = motions.slice();
-      Promise.allSettled(falling.map(motion => motion.finished)).then(() => { if (active && !rebuilding && assembly === run) status.textContent = 'Curiosity badge unlocked. Shall we rebuild?'; });
-    }
-    rebuildButton.focus({preventScroll:true});
-  }
-
-  danger.addEventListener('click',collapse);
-  rebuildButton.addEventListener('click',rebuild);
-  dialog.addEventListener('cancel',event => { event.preventDefault(); rebuild(); });
-  dialog.addEventListener('close',restore);
-  reduce.addEventListener('change',event => {
-    if (!event.matches) return;
-    activeTyping.forEach(finish => finish());
-    chargeControls.forEach(({stop}) => stop()); toyMotions.forEach(motion => motion.cancel()); toyMotions.clear();
-    if (active) restore();
-  });
-})();
-
-  </script>
+  <script src="site.js"></script>
+  <script src="home.js"></script>
+  <script src="playful.js"></script>
+  <script src="vendor/matter.min.js"></script>
+  <script src="physics-world.js"></script>
+  <script src="gravity.js"></script>
 </body>
 </html>

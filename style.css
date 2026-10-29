@@ -1,4 +1,4 @@
-/* Native CSS, no dependencies. DESIGN_VARIANCE:6 / MOTION_INTENSITY:6 / VISUAL_DENSITY:4.
+    /* Native CSS. Optional playground uses vendored Matter.js. DESIGN_VARIANCE:6 / MOTION_INTENSITY:6 / VISUAL_DENSITY:4.
        Blue accent in light mode, red in dark mode. Readability comes first.
        Radius: panels 18px, controls 10px, circular map nodes.
        Layers: header 10, toast 20; native dialogs use the browser top layer. */
@@ -257,8 +257,8 @@
       dialog[open] { animation:dialog-slide .3s var(--ease) both; }
       dialog[open]::backdrop { animation:backdrop-in .25s ease both; }
       nav.is-open { animation:slide-up .25s var(--ease) both; }
-      .theme-symbol { transition:transform .4s var(--ease); }
-      .theme-control:hover .theme-symbol { transform:rotate(35deg); }
+      .theme-symbol { transition:opacity .2s var(--ease); }
+      .theme-control:hover .theme-symbol { transform:none; }
       @keyframes slide-from-left { from { opacity:0; transform:translate3d(-30px,0,0); } to { opacity:1; transform:none; } }
       @keyframes slide-from-right { from { opacity:0; transform:translate3d(30px,12px,0); } to { opacity:1; transform:none; } }
       @keyframes map-arrive { from { opacity:0; transform:translate3d(12px,10px,0) scale(.96); } to { opacity:1; transform:none; } }
@@ -300,7 +300,7 @@
       .route-count { font-size:.65rem; } .route-heading { flex-wrap:wrap; }
     }
     @media print {
-      @page { size:A4; margin:14mm; } :root { color-scheme:light; } body>:not(#resume-sheet) { display:none!important; }
+      @page { size:A4; margin:14mm; } :root { color-scheme:light; } body[data-page=home]>:not(#resume-sheet) { display:none!important; }
       #resume-sheet { display:block; color:#18221b; font:10pt/1.4 Arial,sans-serif; } #resume-sheet h1 { font:bold 22pt/1.2 Arial,sans-serif; letter-spacing:-.03em; } #resume-sheet h2 { font:bold 11pt/1.3 Arial,sans-serif; letter-spacing:0; margin:14pt 0 6pt; border-bottom:1px solid #aaa; padding-bottom:4pt; } #resume-sheet h3 { font:bold 10pt/1.3 Arial,sans-serif; margin-top:9pt; letter-spacing:0; } #resume-sheet p { margin:4pt 0; max-width:none; } #resume-sheet ul { padding-left:16pt; margin:5pt 0; } #resume-sheet li { margin-bottom:3pt; } #resume-sheet a { text-decoration:none; } #resume-sheet .print-item { break-inside:avoid; }
     }
 /* Playful layer: native CSS + Web Animations. The large effect is opt-in.
