@@ -5,12 +5,12 @@ A static GitHub Pages portfolio. Open `index.html` through a local static server
 ## Pages
 
 - `index.html`: portfolio, project details and the gravity playground.
-- `profile.html`: profile placeholders and a photo area. Clicking the Notcontro1 name opens this page.
-- `certificates.html`: an initially empty certificate gallery, ready for actual certificates.
+- `profile.html`: brief personal introduction and supplied portrait. Clicking the Notcontro1 name opens this page.
+- `certificates.html`: searchable certificates, awards and milestones with image previews and evidence labels.
 
-## Add your profile
+## Update your profile
 
-1. Put your photo in `assets/profile/`.
+1. The current portrait is `assets/profile/masyhur-portrait.png`. Replace it or add another image in that folder.
 2. Update the strings in `profile-data.js` and set `photo` to its relative path.
 3. Commit and push. Empty or broken photo paths keep the placeholder visible.
 
@@ -18,7 +18,9 @@ A static GitHub Pages portfolio. Open `index.html` through a local static server
 
 1. Put real certificate images or PDFs in `assets/certificates/`.
 2. Add objects to the array in `certificates-data.js`, following the example in that file.
-3. Commit and push. The page automatically replaces its empty state with the gallery, search, category filters, image previews and available document/verification links.
+3. Commit and push. The gallery builds search, category filters, previews and document links automatically. Use `kind` and `description` to distinguish certificates, awards and supporting records. `issued` accepts a year or year-month. Use `relatedUrl` for project/event pages, and reserve `credentialUrl` for real credential verification.
+
+The current collection has six certificates, one robotics medal, a school enrichment excerpt, and two portfolio references without certificate images. The full school report is not published because it includes identification and health information. Only its enrichment section is included. No issue date is claimed for the AI course, whose supplied certificate does not display one.
 
 There is no public upload form: adding files to this repository publishes them for all visitors. No certificate records or issue dates are invented.
 

@@ -1,13 +1,12 @@
-// Add your own wording and photo path here. No personal details are invented.
-// Example photo path: "assets/profile/portrait.jpg".
+// Keep this introduction short. The supplied portrait is stored locally.
 window.PORTFOLIO_PROFILE = {
-  name: "Your name here",
-  role: "Your role or specialisation",
-  location: "Your location",
-  photo: "",
-  photoAlt: "Profile photo",
-  introduction: "A short introduction will go here. A few lines about who you are, what you enjoy, and what you are working towards.",
-  exploring: "Your current interests, skills you are learning, or the next thing you want to build.",
-  outside: "A little about your hobbies, interests, or what you enjoy away from the screen.",
-  next: "An opportunity, personal goal, or project you would like to work on next."
+  name: "Abdul Masyhur Deo",
+  role: "IT student specialising in Cloud",
+  location: "Singapore",
+  photo: "assets/profile/masyhur-portrait.png",
+  photoAlt: "Portrait of Abdul Masyhur Deo",
+  introduction: "I'm a Diploma in Information Technology student at Nanyang Polytechnic, specialising in Cloud. I enjoy building useful web applications and learning how to run them.",
+  exploring: "Cloud computing and full-stack development, through projects such as Aeris and an assignment deadline tracker.",
+  outside: "I work part-time at McDonald's and enjoy experimenting with game ideas in Unity.",
+  next: "An IT internship where I can build practical cloud and software development skills."
 };

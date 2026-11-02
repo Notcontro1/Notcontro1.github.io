@@ -1,4 +1,17 @@
 /* Shared profile and certificate layouts. Same palette and radius scale as home. */
+.profile-photo-frame>img { object-position:50% 65%; }
+.collection-count { color:var(--muted); font-size:.82rem; margin-bottom:18px; }
+.certificate-description { color:var(--muted); font-size:.94rem; line-height:1.8; margin-top:18px; }
+.certificate-evidence { color:var(--accent); font-size:.8rem; margin-top:14px; }
+.certificate-cover .certificate-document-label { display:grid; gap:15px; text-align:center; max-width:28ch; font-size:.85rem; }
+.certificate-document-label strong { color:var(--text); font-size:clamp(1.5rem,2.5vw,2rem); letter-spacing:-.04em; line-height:1.2; }
+.record-category { color:var(--accent); font-size:.8rem; }
+.certificate-card[data-category="Computing"] .certificate-cover { background:var(--tint); }
+.certificate-card:focus-within { border-color:var(--accent); }
+@media(prefers-reduced-motion:no-preference) {
+  .certificate-card { animation:page-arrive .5s var(--ease) both; animation-delay:calc(var(--card-index, 0) * 45ms); transition:transform .25s var(--ease),border-color .25s; }
+  @media(hover:hover) { .certificate-card:hover { transform:translateY(-4px); border-color:var(--accent-line); } }
+}
 .page-shell { padding-block:35px 70px; min-height:calc(100dvh - 160px); }
 .page-back { display:inline-flex; align-items:center; gap:10px; color:var(--muted); font-size:.83rem; text-decoration:none; padding-block:8px; }
 .page-back:hover { color:var(--accent); }
