@@ -20,7 +20,7 @@ A static GitHub Pages portfolio. Open `index.html` through a local static server
 2. Add objects to the array in `certificates-data.js`, following the example in that file.
 3. Commit and push. The gallery builds search, category filters, previews and document links automatically. Use `kind` and `description` to distinguish certificates, awards and supporting records. `issued` accepts a year or year-month. Use `relatedUrl` for project/event pages, and reserve `credentialUrl` for real credential verification.
 
-The current collection has six certificates, one robotics medal, a school enrichment excerpt, and two portfolio references without certificate images. The full school report is not published because it includes identification and health information. Only its enrichment section is included. No issue date is claimed for the AI course, whose supplied certificate does not display one.
+The current collection has six certificates, two IBM SkillsBuild digital badges, one robotics medal, a school enrichment excerpt, and two portfolio references. The IBM badges link to their public Credly credentials. The full school report is not published because it includes identification and health information. Only its enrichment section is included. No issue date is claimed for the AI course, whose supplied certificate does not display one.
 
 There is no public upload form: adding files to this repository publishes them for all visitors. No certificate records or issue dates are invented.
 

@@ -12,6 +12,28 @@
 // }
 window.PORTFOLIO_CERTIFICATES = [
   {
+    title: "User Experience Design Fundamentals",
+    issuer: "IBM SkillsBuild",
+    issued: "2025",
+    category: "Design",
+    kind: "Digital badge",
+    description: "UX design fundamentals, including user personas, wireframes, prototypes and usability testing. This badge does not expire.",
+    credentialId: "4e6b7c4e-fce0-4f2c-bf76-fa9bfce0c8a5",
+    image: "assets/certificates/ibm-user-experience-design-fundamentals.png",
+    credentialUrl: "https://www.credly.com/badges/4e6b7c4e-fce0-4f2c-bf76-fa9bfce0c8a5/public_url"
+  },
+  {
+    title: "Web Development Fundamentals",
+    issuer: "IBM SkillsBuild",
+    issued: "2025",
+    category: "Computing",
+    kind: "Digital badge",
+    description: "Web development fundamentals using HTML, CSS and JavaScript, including building, testing and publishing websites. This badge does not expire.",
+    credentialId: "b90174ab-4583-400c-946a-eccc8f871df3",
+    image: "assets/certificates/ibm-web-development-fundamentals.png",
+    credentialUrl: "https://www.credly.com/badges/b90174ab-4583-400c-946a-eccc8f871df3/public_url"
+  },
+  {
     title: "AI Fluency: Framework & Foundations",
     issuer: "Anthropic",
     category: "Computing",
@@ -26,7 +48,7 @@ window.PORTFOLIO_CERTIFICATES = [
     issued: "2024",
     category: "Computing",
     kind: "Competition record",
-    description: "Referenced in my portfolio document. A certificate image has not been supplied.",
+    description: "National Olympiad in Informatics, 2024.",
     relatedUrl: "https://noisg.comp.nus.edu.sg/noi/",
     relatedLabel: "Event website"
   },
@@ -36,7 +58,7 @@ window.PORTFOLIO_CERTIFICATES = [
     issued: "2023",
     category: "Computing",
     kind: "Project record",
-    description: "Web development training and a cyberbullying awareness website. My portfolio includes the project link; no certificate image was supplied.",
+    description: "Web development training and a cyberbullying awareness website.",
     relatedUrl: "https://ttinten.github.io/Project-Heartcode/index.html",
     relatedLabel: "Visit project"
   },
@@ -46,7 +68,7 @@ window.PORTFOLIO_CERTIFICATES = [
     issued: "2023",
     category: "Computing",
     kind: "Participation record",
-    description: "Listed in my 2023 school enrichment record. The preview shows the relevant excerpt from that record.",
+    description: "Listed in my 2023 school enrichment record.",
     image: "assets/certificates/buildingblocs-2023-excerpt.png"
   },
   {
@@ -64,7 +86,7 @@ window.PORTFOLIO_CERTIFICATES = [
     issued: "2022",
     category: "Robotics",
     kind: "Award medal",
-    description: "WRO RoboMission Best Robot Performance Award, Secondary category: 3rd place. The preview shows the front and back of the medal.",
+    description: "WRO RoboMission Best Robot Performance Award, Secondary category: 3rd place.",
     image: "assets/certificates/national-robotics-competition-2022.png"
   },
   {

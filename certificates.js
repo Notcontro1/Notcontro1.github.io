@@ -45,8 +45,8 @@
     image.removeAttribute('src');
     image.alt = record.title;
     const imageUrl = safeUrl(record.image);
-    fallback.hidden = false;
-    fallback.textContent = imageUrl ? 'Loading preview.' : 'This is a portfolio record. A certificate image has not been supplied.';
+    fallback.hidden = !imageUrl;
+    fallback.textContent = imageUrl ? 'Loading preview.' : '';
     image.onload = () => { image.hidden = false; fallback.hidden = true; };
     image.onerror = () => { image.hidden = true; fallback.hidden = false; fallback.textContent = 'The preview could not load. Use the document or image link if available.'; };
     if (imageUrl) image.src = imageUrl;
@@ -99,7 +99,8 @@
       if (record.kind) body.append(element('p', record.kind, 'certificate-evidence'));
       const date = dateLabel(record.issued);
       if (date) body.append(element('p', date, 'certificate-date'));
-      const button = element('button', (record.kind && !/certificate/i.test(record.kind) ? 'View record' : 'View certificate') + ' \u2197', 'text-link');
+      const label = /badge/i.test(record.kind || '') ? 'View badge' : record.kind && !/certificate/i.test(record.kind) ? 'View record' : 'View certificate';
+      const button = element('button', label + ' \u2197', 'text-link');
       button.type = 'button';
       button.setAttribute('aria-haspopup', 'dialog');
       button.setAttribute('aria-label', 'View ' + record.title);
